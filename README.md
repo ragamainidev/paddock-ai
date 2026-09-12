@@ -1,6 +1,6 @@
 # Paddock
 
-A decision workspace for enthusiast car buyers and salvage rebuilders.
+A personal project by [Raghav Maini](https://raghavmaini.com/), exploring how AI agents can support decisions as the evidence changes.
 
 A damaged exotic can make sense for a buyer with the tools, time and skills to
 repair it, while being an expensive mistake for someone paying shop rates.
@@ -13,8 +13,7 @@ invalidate an earlier repair quote. A higher auction bid can make another
 investigation pointless. The assessment retains its history, rechecks evidence
 applicability and withdraws support for a decision when its basis no longer holds.
 
-Built by [Raghav Maini](https://github.com/ragamainidev).
-Read the design rationale: **[Designing AI agents for decisions that keep changing](https://ragamaini.substack.com/p/designing-ai-agents-for-decisions)**.
+I wrote about the engineering decisions behind it in **[Designing AI agents for decisions that keep changing](https://raghavmaini.com/writing/designing-ai-agents-for-decisions/)**.
 
 ## What is implemented
 
