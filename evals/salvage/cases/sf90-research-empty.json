@@ -1,0 +1,122 @@
+{
+  "name": "sf90-research-empty",
+  "note": "Every worker returned empty; the report must degrade without invented numbers. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+  "lotId": "sf90-front-il",
+  "triage": {
+    "areas": [
+      {
+        "area": "front clip / bumper / fascia",
+        "kind": "cosmetic",
+        "photos": [0, 1, 3, 4, 10],
+        "severity": "heavy",
+        "description": "Front bumper cover, splitter, and both headlight assemblies completely torn off; fascia support brackets bent. This is a bolt-on panel loss but extensive - full front clip replacement needed."
+      },
+      {
+        "area": "front suspension (both sides)",
+        "kind": "mechanical",
+        "photos": [0, 1, 3],
+        "severity": "moderate",
+        "description": "Front wheel/hub/knuckle assemblies exposed with fascia gone; wheel angle and hub visibility suggest possible control arm or knuckle damage on at least the right front, though tires/wheels themselves look undamaged and not knocked into severe camber."
+      },
+      {
+        "area": "rear bumper / diffuser / hybrid harness",
+        "kind": "cosmetic",
+        "photos": [2, 5, 9],
+        "severity": "moderate",
+        "description": "Rear bumper cover and diffuser missing, exposing exhaust tips and orange high-voltage hybrid cabling and cooling lines. No visible impact deformation to rear structural crash rails, appears to be disassembly/parts removal rather than rear collision damage."
+      },
+      {
+        "area": "front crash structure / radiator support",
+        "kind": "structural",
+        "photos": [0, 3, 4],
+        "severity": "moderate",
+        "description": "With front fascia removed, radiator support and front crush structure are visible but photos do not clearly show rail bending or frame crumple; front-end hit appears moderate-to-heavy but structural rail integrity cannot be confirmed from these angles."
+      },
+      {
+        "area": "windshield",
+        "kind": "cosmetic",
+        "photos": [8],
+        "severity": "light",
+        "description": "Small spider crack visible in corner of windshield in dash cluster photo; otherwise glass intact."
+      },
+      {
+        "area": "interior",
+        "kind": "cosmetic",
+        "photos": [6, 7, 8],
+        "severity": "light",
+        "description": "Cabin, seats, dash, and steering wheel appear clean and undamaged with no airbag deployment evident; low mileage (3004 mi) confirmed on cluster."
+      },
+      {
+        "area": "electrical / hybrid system",
+        "kind": "electrical",
+        "photos": [8, 5, 9],
+        "severity": "moderate",
+        "description": "Dash cluster shows multiple warning lights and 'System not programmed' message, plus exposed orange high-voltage hybrid cabling at rear with covers removed - requires full HV isolation check before any handling."
+      }
+    ],
+    "overall": "borderline",
+    "confidence": 0.55,
+    "fireEvidence": false,
+    "observations": [
+      {
+        "note": "Front clip severely damaged - both front wheels/suspension exposed, front bumper and fenders torn away, front-right suspension knuckle/hub visibly displaced, headlight assembly gone",
+        "photo": 0
+      },
+      {
+        "note": "Left side view showing front bumper/fender torn off, front wheel assembly exposed and suspension components visible, rear intact with yellow tow strap",
+        "photo": 1
+      },
+      {
+        "note": "Rear quarter view - rear bumper cover and diffuser missing, exposing exhaust, hybrid wiring harness, and structural rear crash members; wheels/tires appear undamaged",
+        "photo": 2
+      },
+      {
+        "note": "Front three-quarter view confirms front bumper, splitter and headlights completely torn away, front fascia support brackets bent, radiator support visible and possibly displaced",
+        "photo": 3
+      },
+      {
+        "note": "Straight-on front view showing collapsed front fascia, cracked/torn front bumper cover hanging, hood shut line intact but front lower structure damaged",
+        "photo": 4
+      },
+      {
+        "note": "Rear view showing exhaust tips, hybrid battery cooling lines, and rear bumper/diffuser missing entirely - taillights present but rear crash structure exposed",
+        "photo": 5
+      },
+      {
+        "note": "Interior driver side - seats, dash, steering wheel appear clean and undamaged, no airbag deployment visible on steering wheel",
+        "photo": 6
+      },
+      {
+        "note": "Interior passenger side/dash view - airbag panel on dash appears intact, no deployment residue visible",
+        "photo": 7
+      },
+      {
+        "note": "Dashboard cluster showing low odometer (3004 mi), multiple warning lights illuminated including hybrid system, brake, and 'System not programmed' message - windshield shows spider-crack in corner",
+        "photo": 8
+      },
+      {
+        "note": "Rear engine cover/glass area - Ferrari badge and rear window intact, lower bumper structure missing",
+        "photo": 9
+      },
+      {
+        "note": "Hood/nose top view - hood and cowl appear straight and undamaged from this angle, confirming damage is concentrated low/front bumper area rather than upper structure",
+        "photo": 10
+      },
+      {
+        "note": "VIN/data plate tag - ZFF96NLA2M0263155, manufactured December 2020, confirms SF90 Stradale model",
+        "photo": 11
+      }
+    ],
+    "floodEvidence": false,
+    "drivetrainRisk": "Rear-mounted V8/hybrid drivetrain itself is not visibly damaged and rear diffuser/bumper removal looks more like disassembly for parts/inspection than impact; however front-end hit reaching the suspension knuckles raises risk of front subframe or steering rack involvement, and exposed hybrid high-voltage lines demand isolation testing before any engine/transmission work is attempted.",
+    "airbagsDeployed": "no"
+  },
+  "evidence": {
+    "comps": [],
+    "prices": []
+  },
+  "expect": {
+    "verdict": "walk",
+    "noExit": true
+  }
+}

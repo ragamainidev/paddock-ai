@@ -1,0 +1,86 @@
+{
+  "name": "paddock",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "catalog:install": "tsx scripts/install-catalog.ts",
+    "catalog:sample": "tsx scripts/ensure-eval-db.ts",
+    "catalog:check": "tsx scripts/catalog-coverage.ts",
+    "release:export": "tsx scripts/export-public.ts",
+    "dev": "next dev",
+    "agent:dev": "eve dev --no-ui --host 127.0.0.1 --port 2001",
+    "agent:build": "eve build",
+    "eval:agent": "tsx scripts/agent-eval.ts",
+    "eval:agent:live": "tsx scripts/agent-eval.ts --live",
+    "build": "next build",
+    "build:all": "eve build && next build",
+    "start": "next start",
+    "lint": "eslint --max-warnings 0",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write .",
+    "ingest": "tsx scripts/install-catalog.ts",
+    "ingest:user": "tsx scripts/ingest.ts",
+    "db:up": "docker compose up -d db --wait && tsx scripts/migrate.ts",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:reset": "tsx scripts/migrate.ts --reset",
+    "db:down": "docker compose down",
+    "eval": "tsx evals/run.ts",
+    "eval:live": "tsx evals/run.ts --live",
+    "eval:check": "tsx scripts/check-eval-artifacts.ts",
+    "prepare": "husky",
+    "knowledge:compile": "tsx scripts/compile-generations.ts",
+    "docs:check": "tsx scripts/check-docs.ts",
+    "wt": "bash scripts/worktree.sh",
+    "auth:hash": "tsx scripts/auth-hash.ts hash",
+    "auth:secret": "tsx scripts/auth-hash.ts secret",
+    "agent:worker": "tsx --env-file-if-exists=.env.local scripts/assessment-worker.ts",
+    "eval:decisions": "tsx scripts/decision-eval.ts"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,mjs}": [
+      "prettier --write",
+      "eslint --fix --max-warnings 0"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.116.0",
+    "@libsql/client": "^0.17.4",
+    "ai": "7.0.93",
+    "eve": "0.52.2",
+    "next": "16.3.0",
+    "pg": "^8.23.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24",
+    "@types/pg": "^8.21.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^4.1.10",
+    "csv-parse": "^7.0.2",
+    "csv-stringify": "^6.8.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0",
+    "node-pg-migrate": "^9.0.0",
+    "playwright-core": "1.49.0",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.12",
+    "typescript": "^5",
+    "vitest": "^4.1.10"
+  },
+  "packageManager": "pnpm@10.28.0"
+}

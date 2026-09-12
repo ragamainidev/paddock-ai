@@ -1,0 +1,235 @@
+@import 'tailwindcss';
+
+/* DESIGN.md tokens, verbatim. Nothing chromatic exists outside this list. */
+:root {
+  --bg: #0a0a0b;
+  --surface: #121214;
+  --surface-raised: #1a1a1d;
+  --border: #26262b;
+  --border-strong: #3a3a42;
+
+  --text: #ededef;
+  --text-dim: #9a9aa3;
+  --text-faint: #6b6b75;
+
+  --accent: #ff7a00;
+  --accent-dim: #b35400;
+  --accent-wash: rgba(255, 122, 0, 0.1);
+
+  --warn: #e5a100;
+  --danger: #e5484d;
+  --ok: #3dd68c;
+}
+
+@theme inline {
+  /* Wipe the default palette so no color outside DESIGN.md can be written. */
+  --color-*: initial;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-dim: var(--text-dim);
+  --color-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-accent-wash: var(--accent-wash);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+
+  --font-sans: var(--font-instrument-sans), 'Inter', system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, 'SFMono-Regular', monospace;
+
+  /* One shadow exists in the system, for popovers. */
+  --shadow-*: initial;
+  --shadow-popover: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* DESIGN.md type scale. Use these, not ad-hoc sizes. */
+@utility type-display {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+@utility type-h1 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+@utility type-h2 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+@utility type-body {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+@utility type-label {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+@utility type-spec {
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+@utility type-meta {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-instrument-sans), 'Inter', system-ui, sans-serif;
+  /* Columns of numbers must align. */
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus is always visible: 1px accent ring, never removed. The search field
+   overrides with its own specified focus treatment. */
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 1px;
+}
+
+::selection {
+  background: var(--accent-wash);
+}
+
+/* DESIGN.md: browser surfaces are themed, not defaulted. Tailwind v4's
+   preflight leaves buttons on cursor:default; an instrument's controls
+   still read as pressable. */
+button:not(:disabled),
+summary,
+label:has(> input[type='file']) {
+  cursor: pointer;
+}
+input,
+textarea {
+  caret-color: var(--accent);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) var(--bg);
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+/* Placeholder cycling fades at 150ms; the swap itself happens in JS. */
+input::placeholder {
+  color: var(--text-faint);
+  opacity: 1;
+  transition: opacity 150ms ease-out;
+}
+input.ph-hidden::placeholder {
+  opacity: 0;
+}
+
+/* DESIGN.md motion, micro register: 120ms ease-out, opacity and 2px
+   translate only. Used by console lines and streamed findings as they
+   arrive. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise-in {
+  animation: rise-in 120ms ease-out both;
+}
+
+/* DESIGN.md motion, structural register: 240ms cubic-bezier(0.2,0,0,1),
+   grid-row height + opacity. Reserved for the console collapse/expand and
+   the report's arrival. */
+.structural-collapse {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition:
+    grid-template-rows 240ms cubic-bezier(0.2, 0, 0, 1),
+    opacity 240ms cubic-bezier(0.2, 0, 0, 1);
+}
+.structural-collapse > * {
+  overflow: hidden;
+  min-height: 0;
+}
+.structural-collapse[data-collapsed='true'] {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+/* The report choreography: verdict first, sections staggered at 60ms steps
+   via --reveal-delay, total under 600ms, then nothing moves again. Applied
+   only when a run finishes in view — revisiting a finished run renders
+   statically (nothing animates on first paint). */
+@keyframes structural-rise {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.choreograph .reveal {
+  animation: structural-rise 240ms cubic-bezier(0.2, 0, 0, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+/* The cursor line's block: the one blinking element in the system.
+   prefers-reduced-motion holds it solid. */
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+.cursor-blink {
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+/* Report traversal: index jumps and photo-anchor jumps glide instead of
+   teleporting, so the reader keeps their sense of place in a long report. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

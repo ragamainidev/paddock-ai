@@ -1,0 +1,69 @@
+{
+  "count": 8,
+  "results": [
+    {
+      "odiNumber": 11681428,
+      "components": "AIR BAGS",
+      "summary": "The owner reported a delayed airbag recall repair because the replacement part was unavailable.",
+      "dateComplaintFiled": "08/18/2025",
+      "crash": false,
+      "fire": false
+    },
+    {
+      "odiNumber": 11220395,
+      "components": "EXTERIOR LIGHTING",
+      "summary": "The owner reported brake lights remaining illuminated after pedal use. Replacing a suggested switch did not resolve the problem.",
+      "dateComplaintFiled": "06/16/2019",
+      "crash": false,
+      "fire": false
+    },
+    {
+      "odiNumber": 11210163,
+      "components": "POWER TRAIN",
+      "summary": "Pump failure reported; the original complaint identifies the pump as MSG.",
+      "dateComplaintFiled": "05/27/2019",
+      "crash": false,
+      "fire": false
+    },
+    {
+      "odiNumber": 11011864,
+      "components": "ELECTRICAL SYSTEM",
+      "summary": "The owner reported the transmission disengaging and the vehicle shutting down while moving, with operation limited to cold conditions.",
+      "dateComplaintFiled": "07/31/2017",
+      "crash": false,
+      "fire": false
+    },
+    {
+      "odiNumber": 11268883,
+      "components": "AIR BAGS",
+      "summary": "The driver reported an unexpected driver-side airbag deployment during freeway travel.",
+      "dateComplaintFiled": "10/16/2019",
+      "crash": false,
+      "fire": false
+    },
+    {
+      "odiNumber": 11204872,
+      "components": "POWER TRAIN",
+      "summary": "The driver reported the transmission disengaging at highway speed, followed by rapid deceleration while coasting. The complaint named the SMG hydraulic pump.",
+      "dateComplaintFiled": "04/30/2019",
+      "crash": false,
+      "fire": false
+    },
+    {
+      "odiNumber": 11735676,
+      "components": "TIRES",
+      "summary": "The driver reported a loud rearward noise followed by sliding, then a near collision while pulling off the highway.",
+      "dateComplaintFiled": "05/04/2026",
+      "crash": false,
+      "fire": false
+    },
+    {
+      "odiNumber": 10436090,
+      "components": "ENGINE AND ENGINE COOLING",
+      "summary": "The report describes a detached cooling fan damaging the hood and engine compartment shortly after people had stood near the open hood.",
+      "dateComplaintFiled": "11/16/2011",
+      "crash": false,
+      "fire": false
+    }
+  ]
+}

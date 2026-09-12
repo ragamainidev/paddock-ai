@@ -1,0 +1,46 @@
+{
+  "count": 8,
+  "message": "Results returned successfully",
+  "results": [
+    {
+      "modelYear": "2003",
+      "make": "BMW",
+      "model": "M5"
+    },
+    {
+      "modelYear": "2003",
+      "make": "BMW",
+      "model": "3 SERIES"
+    },
+    {
+      "modelYear": "2003",
+      "make": "BMW",
+      "model": "Z4"
+    },
+    {
+      "modelYear": "2003",
+      "make": "BMW",
+      "model": "M3 CONVERTIBLE"
+    },
+    {
+      "modelYear": "2003",
+      "make": "BMW",
+      "model": "7 SERIES"
+    },
+    {
+      "modelYear": "2003",
+      "make": "BMW",
+      "model": "X5"
+    },
+    {
+      "modelYear": "2003",
+      "make": "BMW",
+      "model": "M3 COUPE"
+    },
+    {
+      "modelYear": "2003",
+      "make": "BMW",
+      "model": "M30"
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "name": "sf90-hammer-bleed",
+  "note": "Run 0bd944d0 (2026-08-15): the worker wrote \"$193,000-$262,000 (bids, not sold) vs $850,000 retail value\" and the old parser made an $850,000 hammer. Typed comps carry one price each; the retail figure is a note. Three heavy structural front zones must price as one program. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+  "lotId": "sf90-front-il",
+  "triage": {
+    "areas": [
+      {
+        "area": "front clip",
+        "kind": "structural",
+        "photos": [0, 3, 4],
+        "severity": "heavy",
+        "description": "Both front corners are torn off with bumper, splitter, headlights, and fenders missing. Photos show the front crash structure/bumper beam visibly bent and torn rather than just cosmetic panels missing, indicating impact reached load-bearing front structure."
+      },
+      {
+        "area": "right front corner",
+        "kind": "structural",
+        "photos": [0],
+        "severity": "heavy",
+        "description": "Right front fender, bumper, and headlight completely gone, exposing front knuckle, caliper, and torn harness; suspension geometry and crash rail exposed suggesting more than skin-deep damage."
+      },
+      {
+        "area": "left front corner",
+        "kind": "structural",
+        "photos": [1, 3],
+        "severity": "heavy",
+        "description": "Left front fender/bumper also missing, wheel sitting at an angle in profile shot consistent with suspension or corner structure displacement."
+      },
+      {
+        "area": "rear clip",
+        "kind": "cosmetic",
+        "photos": [2, 5, 9],
+        "severity": "moderate",
+        "description": "Rear bumper fascia and diffuser trim removed for inspection/parts, exposing hybrid motor, exhaust, and wiring; underlying rear structure and taillights appear intact with no visible crush."
+      },
+      {
+        "area": "wheels/suspension",
+        "kind": "mechanical",
+        "photos": [0, 1],
+        "severity": "heavy",
+        "description": "Front wheel angles in side and 3/4 shots plus exposed knuckles/calipers suggest bent or damaged front suspension components on at least one, possibly both, corners."
+      },
+      {
+        "area": "electrical",
+        "kind": "electrical",
+        "photos": [0, 1, 2, 8],
+        "severity": "moderate",
+        "description": "Multiple exposed wiring harnesses at front and rear (near hybrid components) with disconnected connectors; dash shows system fault warnings likely tied to sensor/harness disruption from the front impact and disassembly for parts removal."
+      },
+      {
+        "area": "hood",
+        "kind": "cosmetic",
+        "photos": [10],
+        "severity": "light",
+        "description": "Hood and cowl show only minor gap/alignment irregularity near the damaged lower corners; panel itself unbent."
+      },
+      {
+        "area": "interior",
+        "kind": "cosmetic",
+        "photos": [6, 7],
+        "severity": "light",
+        "description": "Interior is clean and undamaged, no airbag deployment, seats and dash intact."
+      }
+    ],
+    "overall": "borderline",
+    "confidence": 0.55,
+    "fireEvidence": false,
+    "observations": [
+      {
+        "note": "Front right corner totally torn away - bumper, headlight, fender missing, exposing suspension knuckle, brake caliper, and torn wiring; front clip severely mangled.",
+        "photo": 0
+      },
+      {
+        "note": "Left side profile shows left front fender/bumper gone, front wheel exposed at odd angle suggesting suspension damage; rear bumper cover also removed showing hybrid components and wiring hanging.",
+        "photo": 1
+      },
+      {
+        "note": "Rear 3/4 view: rear bumper fascia entirely removed, exposing exhaust, hybrid electric motor unit, wiring; taillight assembly intact but surrounding structure exposed.",
+        "photo": 2
+      },
+      {
+        "note": "Front left/right view confirms front clip destruction - bumper, splitter, headlights missing, radiator support and crash structure visible and deformed; hood and cabin appear undamaged.",
+        "photo": 3
+      },
+      {
+        "note": "Straight-on front view shows both headlights gone, bumper beam/crash structure visibly bent and torn on left side, hood edge deformed at lower corners.",
+        "photo": 4
+      },
+      {
+        "note": "Direct rear view: rear bumper fully removed, diffuser and crash structure visible but appears largely intact aside from missing fascia; exhaust tips and hybrid module exposed but not obviously crushed.",
+        "photo": 5
+      },
+      {
+        "note": "Interior driver side - seats, dash, steering wheel all clean and undamaged, no airbag deployment visible.",
+        "photo": 6
+      },
+      {
+        "note": "Interior wide shot - dash, center console, seats intact, no deployed airbags, no fire/water staining.",
+        "photo": 7
+      },
+      {
+        "note": "Instrument cluster shows only 3004 miles, warning lights for system faults (likely from disconnected sensors/harness) consistent with front-end wiring damage, no fire/flood indication.",
+        "photo": 8
+      },
+      {
+        "note": "Rear engine cover/glass area - cosmetic only, panel gaps normal, no structural deformation visible.",
+        "photo": 9
+      },
+      {
+        "note": "Hood/cowl area shows only minor panel gap misalignment, otherwise cosmetically clean.",
+        "photo": 10
+      },
+      {
+        "note": "VIN plate photo confirming identity, no damage info.",
+        "photo": 11
+      }
+    ],
+    "floodEvidence": false,
+    "drivetrainRisk": "The V8/hybrid powertrain sits mid-rear and photos of that area (2,5,9) show the exhaust and hybrid motor module intact with no visible impact deformation, suggesting the engine/gearbox itself likely escaped direct force. However, the severe front-end intrusion reaching the front crash structure and suspension raises real concern about front subframe alignment and high-voltage front wiring integrity - a full HV isolation and frame-alignment check is essential before any drivetrain assumptions are made.",
+    "airbagsDeployed": "no"
+  },
+  "evidence": {
+    "comps": [
+      {
+        "lane": "clean",
+        "outcome": "sold",
+        "price": 506000,
+        "year": 2021,
+        "date": "2025-05",
+        "title": "clean",
+        "url": "https://cars.bonhams.com/auction/28793/lot/11/2021-ferrari-sf90-stradale-chassis-no-zff95nmb000272926/",
+        "source": "cars.bonhams.com"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 389995,
+        "year": 2021,
+        "title": "clean",
+        "url": "https://www.cars.com/shopping/ferrari-sf90_stradale-2021/",
+        "source": "cars.com",
+        "note": "nationwide low ask"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 849990,
+        "year": 2021,
+        "mileage": 1082,
+        "title": "clean",
+        "url": "https://www.cars.com/shopping/ferrari-sf90_stradale-2021/",
+        "source": "cars.com",
+        "note": "dealer ask, 1,082 miles"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 479000,
+        "year": 2024,
+        "title": "clean",
+        "url": "https://www.kbb.com/ferrari/sf90/",
+        "source": "kbb.com",
+        "note": "KBB private party, 2024MY reference"
+      },
+      {
+        "lane": "clean",
+        "outcome": "sold",
+        "price": 275625,
+        "year": 2021,
+        "date": "2025-05-17",
+        "title": "clean",
+        "url": "https://www.classic.com/m/ferrari/sf90/stradale/",
+        "source": "classic.com",
+        "note": "lowest recorded sale"
+      },
+      {
+        "lane": "clean",
+        "outcome": "sold",
+        "price": 935000,
+        "year": 2021,
+        "date": "2022-01-15",
+        "title": "clean",
+        "url": "https://www.classic.com/m/ferrari/sf90/stradale/",
+        "source": "classic.com",
+        "note": "highest recorded sale"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "bid_no_sale",
+        "price": 193000,
+        "year": 2021,
+        "date": "2025-05-06",
+        "title": "salvage",
+        "url": "https://autoastat.com/en/vehicle/ZFF95NLA4M0265120-56705499",
+        "source": "autoastat.com",
+        "note": "first run; retail value $850,000 stated on the page"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "sold",
+        "price": 262000,
+        "year": 2021,
+        "date": "2025-05-09",
+        "title": "salvage",
+        "url": "https://autoastat.com/en/vehicle/ZFF95NLA4M0265120-56792164",
+        "source": "autoastat.com",
+        "note": "second run"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "bid_no_sale",
+        "price": 157000,
+        "title": "salvage",
+        "damage": "flood, certificate of destruction",
+        "url": "https://www.thedrive.com/news/buy-this-flood-damaged-1m-ferrari-sf90-stradale-on-copart-we-dare-you",
+        "source": "thedrive.com",
+        "note": "~$1,000,000 retail stated"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "ask",
+        "price": 141000,
+        "year": 2023,
+        "mileage": 1248,
+        "title": "clean",
+        "damage": "theft/vandalism",
+        "url": "https://carfast.express/en/auction/brand-ferrari",
+        "source": "carfast.express"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "ask",
+        "price": 155000,
+        "year": 2023,
+        "mileage": 1248,
+        "title": "clean",
+        "damage": "theft/vandalism",
+        "url": "https://carfast.express/en/auction/brand-ferrari",
+        "source": "carfast.express",
+        "note": "buy-now"
+      }
+    ],
+    "prices": []
+  },
+  "expect": {
+    "wreckMax": 300000,
+    "oneFrontProgram": true
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "name": "sf90-hammer-point",
+  "note": "Single-point wreck citation (157k) plus outlier-wide clean range. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+  "lotId": "sf90-front-il",
+  "triage": {
+    "areas": [
+      {
+        "area": "front clip",
+        "kind": "cosmetic",
+        "photos": [0, 3, 4, 10],
+        "severity": "heavy",
+        "description": "Entire front fascia, lower bumper, and splitter torn off and missing; headlight housings displaced. Panels behind (hood, fenders) appear to retain their shape, so damage looks concentrated in bolt-on fascia/bumper components rather than structure, but impact force needed to remove them this cleanly raises suspicion of hidden radiator support or rail contact."
+      },
+      {
+        "area": "left front corner",
+        "kind": "mechanical",
+        "photos": [0, 1],
+        "severity": "heavy",
+        "description": "Left front wheel and tire completely missing, exposing brake caliper, hub, and control arm; wheel well liner and lower fascia torn away. Consistent with a hard corner impact that could have bent suspension or knuckle even if rail itself is not visibly torn."
+      },
+      {
+        "area": "rear clip",
+        "kind": "cosmetic",
+        "photos": [1, 2, 5, 9],
+        "severity": "moderate",
+        "description": "Rear bumper cover and diffuser shroud removed/hanging, exposing hybrid inverter wiring, exhaust tips, and rear crash beam; taillights and engine cover glass intact, no visible tearing of rear rails or subframe in these photos."
+      },
+      {
+        "area": "windshield/glass",
+        "kind": "cosmetic",
+        "photos": [4],
+        "severity": "light",
+        "description": "Small chip/crack visible at lower corner of windshield; otherwise glass intact."
+      },
+      {
+        "area": "underbody",
+        "kind": "mechanical",
+        "photos": [1, 5, 9],
+        "severity": "heavy",
+        "description": "With front and rear fascias off, hybrid high-voltage cabling, inverter box, and exhaust/diffuser hardware are exposed to the elements and yard handling; unknown whether wiring or coolant lines were compromised in the impact versus during disassembly for parts."
+      },
+      {
+        "area": "wheels/suspension",
+        "kind": "mechanical",
+        "photos": [0, 1],
+        "severity": "heavy",
+        "description": "Missing left front wheel entirely and exposed hub/caliper strongly suggest a hard direct impact to that corner; right side wheels appear seated normally in rear 3/4 shots but front-left geometry cannot be assessed with the wheel gone."
+      },
+      {
+        "area": "interior",
+        "kind": "cosmetic",
+        "photos": [6, 7, 8],
+        "severity": "light",
+        "description": "Cabin looks clean and undamaged, seats, dash, and steering wheel airbag cover intact with no deployment evidence; low mileage (3004 mi) shown on cluster."
+      }
+    ],
+    "overall": "borderline",
+    "confidence": 0.45,
+    "fireEvidence": false,
+    "observations": [
+      {
+        "note": "Front clip torn away, left front wheel/tire missing entirely exposing brake caliper and hub, front bumper and fascia shredded, hood edge crumpled.",
+        "photo": 0
+      },
+      {
+        "note": "Left side profile confirms front fascia and left front corner completely torn off; rear bumper cover also missing exposing hybrid wiring harness and rear crash structure.",
+        "photo": 1
+      },
+      {
+        "note": "Rear 3/4 view shows rear bumper fascia removed, diffuser/exhaust exposed, right side fender scuffed but shape intact; wheels look square (no obvious camber loss visible from this angle).",
+        "photo": 2
+      },
+      {
+        "note": "Front right corner view shows fascia hanging, headlight area disturbed, radiator support/core visible but rails behind it not clearly deformed.",
+        "photo": 3
+      },
+      {
+        "note": "Straight-on front view shows lower fascia torn away, small crack/chip on windshield lower corner, hood shut line normal suggesting hood and frame above headlights not grossly bent.",
+        "photo": 4
+      },
+      {
+        "note": "Rear straight-on view: bumper cover off, taillights intact, exhaust/diffuser assembly hanging loose but rear crash beam appears present, no visible tearing of the tub or rear subframe rails.",
+        "photo": 5
+      },
+      {
+        "note": "Interior right seat area clean, no airbag deployment, no fire/water staining.",
+        "photo": 6
+      },
+      {
+        "note": "Interior dash/steering wheel view - dash intact, no airbag deployment visible, steering wheel airbag cover intact.",
+        "photo": 7
+      },
+      {
+        "note": "Instrument cluster shows only 3004 miles, warning lights for system-not-programmed (likely from battery disconnect) and low-voltage/hybrid faults, but no crash-related SRS deployment message legible.",
+        "photo": 8
+      },
+      {
+        "note": "Rear engine cover/hatch view shows glass intact, rear grille panel present, no fire or heat discoloration visible.",
+        "photo": 9
+      },
+      {
+        "note": "Hood/cowl close-up shows panel gaps uniform, no buckling, confirming hood itself is not majorly deformed despite lower fascia loss.",
+        "photo": 10
+      },
+      {
+        "note": "VIN/data plate photo, no damage information, confirms car identity ZFF96NLA2M0263155.",
+        "photo": 11
+      }
+    ],
+    "floodEvidence": false,
+    "drivetrainRisk": "No engine or transmission components are visibly missing or damaged in these photos, and the rear clamshell/engine cover glass looks intact, but with the front fascia gone and the left front wheel completely detached, a hard front-corner impact is likely — this can transmit shock into the front-mounted hybrid motor/inverter and cooling radiators even without visible rail damage; the exposed hybrid wiring at the rear also needs high-voltage isolation testing before any diagnostics or work begins.",
+    "airbagsDeployed": "no"
+  },
+  "evidence": {
+    "comps": [
+      {
+        "lane": "clean",
+        "outcome": "sold",
+        "price": 275625,
+        "year": 2021,
+        "date": "2025-05-17",
+        "title": "clean",
+        "url": "https://www.classic.com/m/ferrari/sf90/stradale/",
+        "source": "classic.com",
+        "note": "lowest recorded sale on the model page"
+      },
+      {
+        "lane": "clean",
+        "outcome": "sold",
+        "price": 935000,
+        "year": 2021,
+        "date": "2022-01-15",
+        "title": "clean",
+        "url": "https://www.classic.com/m/ferrari/sf90/stradale/",
+        "source": "classic.com",
+        "note": "highest recorded sale on the model page"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "sold",
+        "price": 262000,
+        "year": 2021,
+        "date": "2025-05-09",
+        "title": "salvage",
+        "url": "https://autoastat.com/en/vehicle/ZFF95NLA4M0265120-56792164",
+        "source": "autoastat.com",
+        "note": "Copart lot 55701215, second run"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "bid_no_sale",
+        "price": 157000,
+        "title": "salvage",
+        "damage": "flood, certificate of destruction",
+        "url": "https://www.thedrive.com/news/buy-this-flood-damaged-1m-ferrari-sf90-stradale-on-copart-we-dare-you",
+        "source": "thedrive.com"
+      }
+    ],
+    "prices": []
+  },
+  "expect": {}
+}

@@ -1,0 +1,1503 @@
+{
+  "date": "2026-09-12",
+  "gitSha": "024347e",
+  "mode": "offline",
+  "suites": {
+    "resolver": {
+      "pipeline": "tokenize → source-aware catalog resolution (deterministic, no model call)",
+      "passed": 47,
+      "total": 47,
+      "rows": [
+        {
+          "n": 1,
+          "query": "e46 m3",
+          "expectation": "top-5: BMW M3; within years: 1999–2006",
+          "pass": true
+        },
+        {
+          "n": 2,
+          "query": "f80 m3",
+          "expectation": "top-5: BMW M3; within years: 2014–2018",
+          "pass": true
+        },
+        {
+          "n": 3,
+          "query": "996 turbo",
+          "expectation": "top-5: Porsche 911 Turbo evidence: trim Turbo; candidates: Porsche /^911 Carrera/ unresolved: trim Turbo; within years: 1999–2005; assumption /turbo trim|turbo names a distinct model line/",
+          "pass": true
+        },
+        {
+          "n": 4,
+          "query": "996 no turbo",
+          "expectation": "top-5: Porsche /^911 Carrera/; absent: Porsche /Turbo/; all unresolved: excluding trim.*Turbo; no match credit: excluding trim.*Turbo; within years: 1999–2005",
+          "pass": true
+        },
+        {
+          "n": 5,
+          "query": "turbo miata",
+          "expectation": "top-5: Mazda MX-5 Miata evidence: aspiration: Turbo; candidates: Mazda /^MX-5/ unresolved: ^aspiration$",
+          "pass": true
+        },
+        {
+          "n": 6,
+          "query": "miata na",
+          "expectation": "top-5: Mazda MX-5 Miata; within years: 1990–1997",
+          "pass": true
+        },
+        {
+          "n": 7,
+          "query": "992 gt3 touring",
+          "expectation": "top-5: Porsche 911 GT3 Touring evidence: trim GT3, trim Touring; candidates: Porsche 911 GT3 unresolved: trim Touring; within years: 2019–2026",
+          "pass": true
+        },
+        {
+          "n": 8,
+          "query": "992gt3",
+          "expectation": "top-5: Porsche 911 GT3 evidence: trim GT3; within years: 2019–2026",
+          "pass": true
+        },
+        {
+          "n": 9,
+          "query": "gt3rs",
+          "expectation": "top-5: Porsche 911 GT3 RS evidence: trim GT3 RS",
+          "pass": true
+        },
+        {
+          "n": 10,
+          "query": "911 90s",
+          "expectation": "top-5: Porsche /^911(?: |$)/; within years: 1990–1999",
+          "pass": true
+        },
+        {
+          "n": 11,
+          "query": "e30",
+          "expectation": "top-5 contains: BMW M3, BMW /^325/; within years: 1982–1994",
+          "pass": true
+        },
+        {
+          "n": 12,
+          "query": "ek9",
+          "expectation": "top-5: Honda Civic 1996–2000; assumption /jdm/",
+          "pass": true
+        },
+        {
+          "n": 13,
+          "query": "mk4 supra",
+          "expectation": "top-5: Toyota Supra 1993–1998",
+          "pass": true
+        },
+        {
+          "n": 14,
+          "query": "mk4 supra tt",
+          "expectation": "top-5: Toyota Supra unresolved: trim Turbo; no match credit: trim Turbo; within years: 1993–1998; assumption /turbo trim/",
+          "pass": true
+        },
+        {
+          "n": 15,
+          "query": "audi tt",
+          "expectation": "top-8: Audi /^TT(?: |$)/",
+          "pass": true
+        },
+        {
+          "n": 16,
+          "query": "c7",
+          "expectation": "top-5 contains: Chevrolet Corvette, Audi /^A6/; fork: [Chevrolet, Audi]",
+          "pass": true
+        },
+        {
+          "n": 17,
+          "query": "c7 rs7",
+          "expectation": "top-5: Audi RS 7; absent: Chevrolet Corvette; within years: 2012–2018; fork: [Audi]",
+          "pass": true
+        },
+        {
+          "n": 18,
+          "query": "c7 z06",
+          "expectation": "top-5: Chevrolet Corvette unresolved: trim Z06; no match credit: trim Z06; within years: 2014–2019; fork: [Chevrolet]",
+          "pass": true
+        },
+        {
+          "n": 19,
+          "query": "mk4",
+          "expectation": "top-5 contains: Toyota Supra, Volkswagen Golf, Volkswagen Jetta; fork: [Toyota, Volkswagen, Volkswagen]",
+          "pass": true
+        },
+        {
+          "n": 20,
+          "query": "r32",
+          "expectation": "top-5 contains: Volkswagen R32; absent: Nissan /.*/; fork: [Nissan, Volkswagen]",
+          "pass": true
+        },
+        {
+          "n": 21,
+          "query": "c5",
+          "expectation": "top-5: Chevrolet Corvette 1997–2004",
+          "pass": true
+        },
+        {
+          "n": 22,
+          "query": "2jz",
+          "expectation": "top-5 contains: Toyota Supra, Lexus IS 300, Lexus SC 300/SC 400; candidates: Lexus SC 300/SC 400 unresolved: engine fitment alternatives; all unresolved: 2jz.*exact engine, engine layout; no match credit: ships with, ^2jz$",
+          "pass": true
+        },
+        {
+          "n": 23,
+          "query": "ls1",
+          "expectation": "top-5 contains: Chevrolet Corvette, Chevrolet Camaro; all unresolved: ls1.*exact engine, engine layout; no match credit: ships with, ^ls1$",
+          "pass": true
+        },
+        {
+          "n": 24,
+          "query": "1jz",
+          "expectation": "nothing; assumption /jdm/",
+          "pass": true
+        },
+        {
+          "n": 25,
+          "query": "rb26",
+          "expectation": "nothing; assumption /jdm/",
+          "pass": true
+        },
+        {
+          "n": 26,
+          "query": "skyline",
+          "expectation": "nothing; assumption /never sold/",
+          "pass": true
+        },
+        {
+          "n": 27,
+          "query": "v10",
+          "expectation": "top-10 contains: Dodge /^Viper(?: |$)/, Audi /^R8(?: |$)/; all unresolved: engine layout; no match credit: engine layout",
+          "pass": true
+        },
+        {
+          "n": 28,
+          "query": "type r",
+          "expectation": "top-5: Honda Civic 5Dr - Type R evidence: Type R; candidates: Acura Integra unresolved: engine fitment alternatives; absent: Subaru /.*/",
+          "pass": true
+        },
+        {
+          "n": 29,
+          "query": "hellcat",
+          "expectation": "top-5 contains: Dodge Challenger, Dodge Charger; all unresolved: engine fitment alternatives; no match credit: Hellcat",
+          "pass": true
+        },
+        {
+          "n": 30,
+          "query": "sti",
+          "expectation": "top-5: Subaru /^WRX STI(?: |$)/ evidence: trim STI; candidates: Subaru WRX unresolved: trim STI",
+          "pass": true
+        },
+        {
+          "n": 31,
+          "query": "evo",
+          "expectation": "top-5: Mitsubishi Lancer Evolution evidence: trim Evolution; candidates: Mitsubishi Lancer unresolved: trim Evolution",
+          "pass": true
+        },
+        {
+          "n": 32,
+          "query": "quadrifoglio",
+          "expectation": "top-5 contains: Alfa Romeo Giulia unresolved: trim Quadrifoglio; all unresolved: trim Quadrifoglio; no match credit: trim Quadrifoglio",
+          "pass": true
+        },
+        {
+          "n": 33,
+          "query": "zr1",
+          "expectation": "top-5 contains: Chevrolet Corvette unresolved: trim ZR1 or ZR-1; all unresolved: trim ZR1 or ZR-1; no match credit: trim ZR1",
+          "pass": true
+        },
+        {
+          "n": 34,
+          "query": "raptor",
+          "expectation": "top-5: Ford /^F150 RAPTOR/ evidence: trim Raptor; candidates: Ford /^F150 Pickup/ unresolved: trim Raptor",
+          "pass": true
+        },
+        {
+          "n": 35,
+          "query": "amg gt",
+          "expectation": "top-15: Mercedes-Benz /^AMG GT(?: |$)/",
+          "pass": true
+        },
+        {
+          "n": 36,
+          "query": "naturally aspirated flat six manual coupe",
+          "expectation": "candidates: Porsche /^911(?: |$)/ evidence: cylinders: 6; all unresolved: engine layout, aspiration, body Coupe, manual; no match credit: engine layout, ^aspiration, ^body; unfilterable: manual",
+          "pass": true
+        },
+        {
+          "n": 37,
+          "query": "brown wagon manual diesel",
+          "expectation": "top-10 contains: Volkswagen Jetta evidence: fuel: DIESEL; all unresolved: body Wagon, brown, manual; no match credit: ^body; unfilterable: brown, manual",
+          "pass": true
+        },
+        {
+          "n": 38,
+          "query": "awd wagon",
+          "expectation": "top-5 contains: Subaru Outback AWD evidence: drive: AWD; all unresolved: body Wagon; no match credit: ^body",
+          "pass": true
+        },
+        {
+          "n": 39,
+          "query": "911 no pdk",
+          "expectation": "top-5: Porsche /^911(?: |$)/; all unresolved: pdk; no match credit: pdk; unfilterable: pdk",
+          "pass": true
+        },
+        {
+          "n": 40,
+          "query": "996 2010",
+          "expectation": "nothing",
+          "pass": true
+        },
+        {
+          "n": 41,
+          "query": "wrx 2019+",
+          "expectation": "top-5 contains: Subaru WRX",
+          "pass": true
+        },
+        {
+          "n": 42,
+          "query": "ae86",
+          "expectation": "top-5: Toyota Corolla 1984–1987",
+          "pass": true
+        },
+        {
+          "n": 43,
+          "query": "s2000",
+          "expectation": "top-5: Honda S2000 2000–2009",
+          "pass": true
+        },
+        {
+          "n": 44,
+          "query": "zzr9000 blorp",
+          "expectation": "nothing",
+          "pass": true
+        },
+        {
+          "n": 45,
+          "query": "991 gt3rs",
+          "expectation": "top-5: Porsche 911 GT3 RS evidence: trim GT3 RS; within years: 2016–2019; assumption /2016–2019/",
+          "pass": true
+        },
+        {
+          "n": 46,
+          "query": "997 gt3 rs",
+          "expectation": "top-5: Porsche 911 GT3 RS evidence: trim GT3 RS; within years: 2007–2012; assumption /2007–2012/",
+          "pass": true
+        },
+        {
+          "n": 47,
+          "query": "gen 1 facelift audi r8",
+          "expectation": "top-5 contains: Audi /^R8(?: |$)/; all unresolved: generation boundaries are unavailable; assumption /no generation data|boundaries are unavailable/",
+          "pass": true
+        }
+      ]
+    },
+    "inspector": {
+      "pipeline": "full agent orchestration over recorded fixtures (vision, research, NHTSA, vPIC, sweep) — offline, frozen clock",
+      "casesPassed": 10,
+      "casesTotal": 10,
+      "checksPassed": 28,
+      "checksTotal": 28,
+      "byClass": {
+        "invariant": {
+          "passed": 13,
+          "total": 13
+        },
+        "behavior": {
+          "passed": 10,
+          "total": 10
+        },
+        "honesty": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "cases": [
+        {
+          "name": "clean car, full pipeline",
+          "description": "An excellent-condition M3 with a matching federal decode: verdict pass, nothing invented, every stage accounted for.",
+          "checks": [
+            {
+              "id": "report-last",
+              "class": "invariant",
+              "desc": "the report is the final event of a successful run",
+              "pass": true,
+              "spec": "SPEC 25"
+            },
+            {
+              "id": "verdict-pass",
+              "class": "behavior",
+              "desc": "clean car earns a pass verdict",
+              "pass": true
+            },
+            {
+              "id": "begin-precedes-status",
+              "class": "invariant",
+              "desc": "every stage announces begin before its status lands (stage rail contract)",
+              "pass": true
+            },
+            {
+              "id": "spans-streamed",
+              "class": "invariant",
+              "desc": "model and fetch calls stream trace spans with timings",
+              "pass": true
+            },
+            {
+              "id": "comps-exclude-subject",
+              "class": "invariant",
+              "desc": "the subject listing never appears in its own comp set",
+              "pass": true,
+              "spec": "SPEC 27"
+            },
+            {
+              "id": "vpic-enriches",
+              "class": "behavior",
+              "desc": "the federal decode fills model/body/plant and finds no mismatch",
+              "pass": true
+            },
+            {
+              "id": "no-history-verdict",
+              "class": "honesty",
+              "desc": "the VIN section never prints a history verdict — it links the services that do check",
+              "pass": true,
+              "spec": "SPEC 26"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "rust changes the research path",
+          "description": "The same car with rust in the photos must produce a different, rust-driven research plan, and cited findings must flow into the money math.",
+          "checks": [
+            {
+              "id": "plan-differs",
+              "class": "behavior",
+              "desc": "two cars with different photos produce different research paths",
+              "pass": true,
+              "spec": "SPEC 23"
+            },
+            {
+              "id": "plan-reasons-stated",
+              "class": "invariant",
+              "desc": "every research topic states the reason it was chosen",
+              "pass": true,
+              "spec": "SPEC 23"
+            },
+            {
+              "id": "verdict-degrades",
+              "class": "behavior",
+              "desc": "high-severity rust pulls the verdict to caution",
+              "pass": true
+            },
+            {
+              "id": "cost-estimates-flow",
+              "class": "behavior",
+              "desc": "cited repair costs surface in the report for the money panel",
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "uncited claims do not survive",
+          "description": "The research agent returns four findings: two cited, one with no source, one with a garbage URL. Only the cited two may exist afterward.",
+          "checks": [
+            {
+              "id": "uncited-dropped",
+              "class": "invariant",
+              "desc": "findings without a valid http(s) source are discarded during validation",
+              "pass": true,
+              "spec": "SPEC 22",
+              "detail": "survived: rust repair, subframe"
+            },
+            {
+              "id": "critical-cited-survives",
+              "class": "behavior",
+              "desc": "the cited critical finding survives and becomes a red flag",
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "photo anchors are validated",
+          "description": "Vision returns anchors pointing at photos 7 and -1 of a 3-photo set. The finding must survive with no anchors rather than being assigned one.",
+          "checks": [
+            {
+              "id": "anchors-clamped",
+              "class": "invariant",
+              "desc": "out-of-range anchors are dropped, the finding keeps none",
+              "pass": true,
+              "spec": "SPEC 21"
+            },
+            {
+              "id": "finding-survives",
+              "class": "behavior",
+              "desc": "the de-anchored finding still reaches the report",
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "federal identity mismatch forces avoid",
+          "description": "vPIC decodes the VIN as a Honda Civic while the listing claims a BMW M3 — the run must flag it with federal wording and refuse to pass the car.",
+          "checks": [
+            {
+              "id": "mismatch-flagged",
+              "class": "behavior",
+              "desc": "the mismatch cites the federal database",
+              "pass": true
+            },
+            {
+              "id": "verdict-avoid",
+              "class": "behavior",
+              "desc": "an identity mismatch is an automatic avoid",
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "missing key refuses honestly",
+          "description": "No vision caller and no ANTHROPIC_API_KEY: the inspection must refuse with a fatal, never mock an analysis.",
+          "checks": [
+            {
+              "id": "refusal",
+              "class": "honesty",
+              "desc": "no key means an honest fatal, not a mocked inspection",
+              "pass": true,
+              "spec": "SPEC 24"
+            },
+            {
+              "id": "vision-degraded-visibly",
+              "class": "honesty",
+              "desc": "the vision stage reports its failure before the fatal",
+              "pass": true,
+              "spec": "SPEC 24"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "stage isolation under dead upstreams",
+          "description": "NHTSA is down and no comps cover the car: both stages must degrade visibly while the report still lands with a computed verdict.",
+          "checks": [
+            {
+              "id": "nhtsa-degrades",
+              "class": "invariant",
+              "desc": "NHTSA failure yields a named degraded status, not a crash",
+              "pass": true,
+              "spec": "SPEC 24"
+            },
+            {
+              "id": "market-degrades",
+              "class": "invariant",
+              "desc": "no comps means a visibly degraded market stage, not a guess",
+              "pass": true,
+              "spec": "SPEC 27"
+            },
+            {
+              "id": "report-still-lands",
+              "class": "invariant",
+              "desc": "independent failures never kill the run",
+              "pass": true,
+              "spec": "SPEC 24"
+            },
+            {
+              "id": "degradations-in-report",
+              "class": "honesty",
+              "desc": "the report carries the degraded stages for the UI to show",
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "malformed vision output is fatal, not papered over",
+          "description": "The vision model returns garbage. The run must fail validation loudly instead of inventing an analysis.",
+          "checks": [
+            {
+              "id": "validation-fatal",
+              "class": "honesty",
+              "desc": "unparseable vision output ends the run with a validation error",
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "VIN provenance is citation-gated",
+          "description": "The sweep returns the subject listing, a real sighting, and an uncited one. Only the real sighting may survive, with its host derived.",
+          "checks": [
+            {
+              "id": "sightings-cited",
+              "class": "invariant",
+              "desc": "uncited sightings are discarded; the subject listing is excluded",
+              "pass": true,
+              "spec": "SPEC 22"
+            },
+            {
+              "id": "sighting-facts-kept",
+              "class": "behavior",
+              "desc": "date and price ride along verbatim",
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "determinism under a frozen clock",
+          "description": "The same fixtures and a frozen clock must produce byte-identical reports across two runs — the agent has no hidden nondeterminism.",
+          "checks": [
+            {
+              "id": "reports-identical",
+              "class": "invariant",
+              "desc": "two runs over identical fixtures produce identical reports",
+              "pass": true
+            },
+            {
+              "id": "timestamp-frozen",
+              "class": "invariant",
+              "desc": "generatedAt comes from the injected clock",
+              "pass": true
+            }
+          ],
+          "pass": true
+        }
+      ]
+    },
+    "salvage": {
+      "pipeline": "recorded live traces (triage + cited research) replayed through the current money model, graded per check",
+      "casesPassed": 8,
+      "casesTotal": 8,
+      "checksPassed": 131,
+      "checksTotal": 131,
+      "byClass": {
+        "invariant": {
+          "passed": 50,
+          "total": 50
+        },
+        "realism": {
+          "passed": 39,
+          "total": 39
+        },
+        "honesty": {
+          "passed": 22,
+          "total": 22
+        },
+        "behavior": {
+          "passed": 20,
+          "total": 20
+        }
+      },
+      "cases": [
+        {
+          "name": "huracan-dead-title",
+          "description": "Non-repairable title with cited wreck prices and thin part-out citations. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+          "checks": [
+            {
+              "id": "verdict-taxonomy",
+              "class": "invariant",
+              "desc": "the verdict is bid or no bid",
+              "pass": true,
+              "spec": "SPEC 45"
+            },
+            {
+              "id": "one-structure-per-program",
+              "class": "invariant",
+              "desc": "a damage program carries at most one structural line",
+              "pass": true,
+              "spec": "SPEC 43"
+            },
+            {
+              "id": "every-line-has-basis",
+              "class": "invariant",
+              "desc": "every cost line carries a basis and an evidence chip",
+              "pass": true,
+              "spec": "SPEC 36"
+            },
+            {
+              "id": "comps-are-typed",
+              "class": "invariant",
+              "desc": "every comp behind the exit has a positive price and an http(s) source",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "ceiling-solves",
+              "class": "invariant",
+              "desc": "the ceiling is the highest $500 step whose all-in stays at or under discipline",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "zero-names-killers",
+              "class": "invariant",
+              "desc": "a zero ceiling names its killers and its unlocks",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "dealbreaker-walks",
+              "class": "invariant",
+              "desc": "a dealbreaker forces no bid regardless of the money",
+              "pass": true,
+              "spec": "SPEC 36"
+            },
+            {
+              "id": "exit-band-sane",
+              "class": "realism",
+              "desc": "the exit is a band: low ≤ typical ≤ high, high under 2.6× low (a 1.4/0.7 comp spread times the 0.65/0.5 discount band)",
+              "pass": true
+            },
+            {
+              "id": "exit-under-clean",
+              "class": "realism",
+              "desc": "a derived exit sits below the clean money it derives from",
+              "pass": true
+            },
+            {
+              "id": "wreck-band-sane",
+              "class": "realism",
+              "desc": "the wreck market is a plausible band: no pocket change, high under 4× low",
+              "pass": true
+            },
+            {
+              "id": "wreck-under-clean",
+              "class": "realism",
+              "desc": "no wreck comp used sits at clean money",
+              "pass": true
+            },
+            {
+              "id": "ceiling-ordering",
+              "class": "realism",
+              "desc": "stress ≤ ceiling ≤ break-even",
+              "pass": true
+            },
+            {
+              "id": "contingency-floor",
+              "class": "realism",
+              "desc": "the hidden-damage contingency never sits below the tier floor",
+              "pass": true
+            },
+            {
+              "id": "no-bid-copy-on-refusal",
+              "class": "honesty",
+              "desc": "a no-bid verdict never carries \"Bid to\" copy",
+              "pass": true
+            },
+            {
+              "id": "exit-basis-cites",
+              "class": "honesty",
+              "desc": "the exit basis names its hosts or confesses a derivation",
+              "pass": true
+            },
+            {
+              "id": "veto-stated",
+              "class": "honesty",
+              "desc": "a dead rebuild lane states its veto in the summary",
+              "pass": true
+            },
+            {
+              "id": "expected-verdict",
+              "class": "behavior",
+              "desc": "verdict is walk",
+              "pass": true
+            },
+            {
+              "id": "expected-dealbreaker",
+              "class": "behavior",
+              "desc": "a dealbreaker is stated",
+              "pass": true
+            },
+            {
+              "id": "wreck-is-context",
+              "class": "behavior",
+              "desc": "the verdict does not flip on the wreck market",
+              "pass": true,
+              "spec": "SPEC 45"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "sf90-clean-anchor-strong",
+          "description": "Clean anchor from five hosts, no wreck citation; the rebuild lane should price. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+          "checks": [
+            {
+              "id": "verdict-taxonomy",
+              "class": "invariant",
+              "desc": "the verdict is bid or no bid",
+              "pass": true,
+              "spec": "SPEC 45"
+            },
+            {
+              "id": "one-structure-per-program",
+              "class": "invariant",
+              "desc": "a damage program carries at most one structural line",
+              "pass": true,
+              "spec": "SPEC 43"
+            },
+            {
+              "id": "every-line-has-basis",
+              "class": "invariant",
+              "desc": "every cost line carries a basis and an evidence chip",
+              "pass": true,
+              "spec": "SPEC 36"
+            },
+            {
+              "id": "comps-are-typed",
+              "class": "invariant",
+              "desc": "every comp behind the exit has a positive price and an http(s) source",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "ceiling-solves",
+              "class": "invariant",
+              "desc": "the ceiling is the highest $500 step whose all-in stays at or under discipline",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "zero-names-killers",
+              "class": "invariant",
+              "desc": "a zero ceiling names its killers and its unlocks",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "exit-band-sane",
+              "class": "realism",
+              "desc": "the exit is a band: low ≤ typical ≤ high, high under 2.6× low (a 1.4/0.7 comp spread times the 0.65/0.5 discount band)",
+              "pass": true
+            },
+            {
+              "id": "exit-under-clean",
+              "class": "realism",
+              "desc": "a derived exit sits below the clean money it derives from",
+              "pass": true
+            },
+            {
+              "id": "ceiling-ordering",
+              "class": "realism",
+              "desc": "stress ≤ ceiling ≤ break-even",
+              "pass": true
+            },
+            {
+              "id": "contingency-floor",
+              "class": "realism",
+              "desc": "the hidden-damage contingency never sits below the tier floor",
+              "pass": true
+            },
+            {
+              "id": "no-bid-copy-on-refusal",
+              "class": "honesty",
+              "desc": "a no-bid verdict never carries \"Bid to\" copy",
+              "pass": true
+            },
+            {
+              "id": "zero-explains",
+              "class": "honesty",
+              "desc": "a zero ceiling says what ate it and what would have to be true",
+              "pass": true
+            },
+            {
+              "id": "exit-basis-cites",
+              "class": "honesty",
+              "desc": "the exit basis names its hosts or confesses a derivation",
+              "pass": true
+            },
+            {
+              "id": "expected-exit-lane",
+              "class": "behavior",
+              "desc": "exit lane is clean_sold_derived",
+              "pass": true
+            },
+            {
+              "id": "wreck-is-context",
+              "class": "behavior",
+              "desc": "the verdict does not flip on the wreck market",
+              "pass": true,
+              "spec": "SPEC 45"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "sf90-ebay-screening",
+          "description": "The same clean anchor with recorded eBay Browse item summaries beside it: the suite runs the live comps fetcher over them, so the fixed-price rule and the exotic whole-vehicle floor are graded on the evidence the assessor would use. Item summaries recorded 2026-08-17 from Browse Cars & Trucks; the auction, the parts-priced spoiler and the listing that declares no buying option are the screening cases.",
+          "checks": [
+            {
+              "id": "verdict-taxonomy",
+              "class": "invariant",
+              "desc": "the verdict is bid or no bid",
+              "pass": true,
+              "spec": "SPEC 45"
+            },
+            {
+              "id": "one-structure-per-program",
+              "class": "invariant",
+              "desc": "a damage program carries at most one structural line",
+              "pass": true,
+              "spec": "SPEC 43"
+            },
+            {
+              "id": "every-line-has-basis",
+              "class": "invariant",
+              "desc": "every cost line carries a basis and an evidence chip",
+              "pass": true,
+              "spec": "SPEC 36"
+            },
+            {
+              "id": "comps-are-typed",
+              "class": "invariant",
+              "desc": "every comp behind the exit has a positive price and an http(s) source",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "comps-fixed-price-only",
+              "class": "invariant",
+              "desc": "no eBay comp comes from a listing that does not declare a fixed price",
+              "pass": true,
+              "spec": "SPEC 53"
+            },
+            {
+              "id": "comps-whole-car",
+              "class": "invariant",
+              "desc": "no eBay ask comp on an exotic or premium lot is priced below $10,000",
+              "pass": true,
+              "spec": "SPEC 53"
+            },
+            {
+              "id": "comps-progress",
+              "class": "invariant",
+              "desc": "the comps progress note states what the screens dropped",
+              "pass": true,
+              "spec": "SPEC 53"
+            },
+            {
+              "id": "ceiling-solves",
+              "class": "invariant",
+              "desc": "the ceiling is the highest $500 step whose all-in stays at or under discipline",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "zero-names-killers",
+              "class": "invariant",
+              "desc": "a zero ceiling names its killers and its unlocks",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "exit-band-sane",
+              "class": "realism",
+              "desc": "the exit is a band: low ≤ typical ≤ high, high under 2.6× low (a 1.4/0.7 comp spread times the 0.65/0.5 discount band)",
+              "pass": true
+            },
+            {
+              "id": "exit-under-clean",
+              "class": "realism",
+              "desc": "a derived exit sits below the clean money it derives from",
+              "pass": true
+            },
+            {
+              "id": "ceiling-ordering",
+              "class": "realism",
+              "desc": "stress ≤ ceiling ≤ break-even",
+              "pass": true
+            },
+            {
+              "id": "contingency-floor",
+              "class": "realism",
+              "desc": "the hidden-damage contingency never sits below the tier floor",
+              "pass": true
+            },
+            {
+              "id": "no-bid-copy-on-refusal",
+              "class": "honesty",
+              "desc": "a no-bid verdict never carries \"Bid to\" copy",
+              "pass": true
+            },
+            {
+              "id": "zero-explains",
+              "class": "honesty",
+              "desc": "a zero ceiling says what ate it and what would have to be true",
+              "pass": true
+            },
+            {
+              "id": "exit-basis-cites",
+              "class": "honesty",
+              "desc": "the exit basis names its hosts or confesses a derivation",
+              "pass": true
+            },
+            {
+              "id": "expected-exit-lane",
+              "class": "behavior",
+              "desc": "exit lane is clean_sold_derived",
+              "pass": true
+            },
+            {
+              "id": "wreck-is-context",
+              "class": "behavior",
+              "desc": "the verdict does not flip on the wreck market",
+              "pass": true,
+              "spec": "SPEC 45"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "sf90-hammer-bleed",
+          "description": "Run 0bd944d0 (2026-08-15): the worker wrote \"$193,000-$262,000 (bids, not sold) vs $850,000 retail value\" and the old parser made an $850,000 hammer. Typed comps carry one price each; the retail figure is a note. Three heavy structural front zones must price as one program. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+          "checks": [
+            {
+              "id": "verdict-taxonomy",
+              "class": "invariant",
+              "desc": "the verdict is bid or no bid",
+              "pass": true,
+              "spec": "SPEC 45"
+            },
+            {
+              "id": "one-structure-per-program",
+              "class": "invariant",
+              "desc": "a damage program carries at most one structural line",
+              "pass": true,
+              "spec": "SPEC 43"
+            },
+            {
+              "id": "every-line-has-basis",
+              "class": "invariant",
+              "desc": "every cost line carries a basis and an evidence chip",
+              "pass": true,
+              "spec": "SPEC 36"
+            },
+            {
+              "id": "comps-are-typed",
+              "class": "invariant",
+              "desc": "every comp behind the exit has a positive price and an http(s) source",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "ceiling-solves",
+              "class": "invariant",
+              "desc": "the ceiling is the highest $500 step whose all-in stays at or under discipline",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "zero-names-killers",
+              "class": "invariant",
+              "desc": "a zero ceiling names its killers and its unlocks",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "exit-band-sane",
+              "class": "realism",
+              "desc": "the exit is a band: low ≤ typical ≤ high, high under 2.6× low (a 1.4/0.7 comp spread times the 0.65/0.5 discount band)",
+              "pass": true
+            },
+            {
+              "id": "exit-under-clean",
+              "class": "realism",
+              "desc": "a derived exit sits below the clean money it derives from",
+              "pass": true
+            },
+            {
+              "id": "wreck-band-sane",
+              "class": "realism",
+              "desc": "the wreck market is a plausible band: no pocket change, high under 4× low",
+              "pass": true
+            },
+            {
+              "id": "wreck-under-clean",
+              "class": "realism",
+              "desc": "no wreck comp used sits at clean money",
+              "pass": true
+            },
+            {
+              "id": "ceiling-ordering",
+              "class": "realism",
+              "desc": "stress ≤ ceiling ≤ break-even",
+              "pass": true
+            },
+            {
+              "id": "contingency-floor",
+              "class": "realism",
+              "desc": "the hidden-damage contingency never sits below the tier floor",
+              "pass": true
+            },
+            {
+              "id": "no-bid-copy-on-refusal",
+              "class": "honesty",
+              "desc": "a no-bid verdict never carries \"Bid to\" copy",
+              "pass": true
+            },
+            {
+              "id": "zero-explains",
+              "class": "honesty",
+              "desc": "a zero ceiling says what ate it and what would have to be true",
+              "pass": true
+            },
+            {
+              "id": "exit-basis-cites",
+              "class": "honesty",
+              "desc": "the exit basis names its hosts or confesses a derivation",
+              "pass": true
+            },
+            {
+              "id": "wreck-max",
+              "class": "behavior",
+              "desc": "no wreck comp used above $300,000 (a retail figure cannot bleed into the hammer band)",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "one-front-program",
+              "class": "behavior",
+              "desc": "three heavy structural front zones price as one front program with one structural line",
+              "pass": true,
+              "spec": "SPEC 43"
+            },
+            {
+              "id": "wreck-is-context",
+              "class": "behavior",
+              "desc": "the verdict does not flip on the wreck market",
+              "pass": true,
+              "spec": "SPEC 45"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "sf90-hammer-point",
+          "description": "Single-point wreck citation (157k) plus outlier-wide clean range. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+          "checks": [
+            {
+              "id": "verdict-taxonomy",
+              "class": "invariant",
+              "desc": "the verdict is bid or no bid",
+              "pass": true,
+              "spec": "SPEC 45"
+            },
+            {
+              "id": "one-structure-per-program",
+              "class": "invariant",
+              "desc": "a damage program carries at most one structural line",
+              "pass": true,
+              "spec": "SPEC 43"
+            },
+            {
+              "id": "every-line-has-basis",
+              "class": "invariant",
+              "desc": "every cost line carries a basis and an evidence chip",
+              "pass": true,
+              "spec": "SPEC 36"
+            },
+            {
+              "id": "comps-are-typed",
+              "class": "invariant",
+              "desc": "every comp behind the exit has a positive price and an http(s) source",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "ceiling-solves",
+              "class": "invariant",
+              "desc": "the ceiling is the highest $500 step whose all-in stays at or under discipline",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "zero-names-killers",
+              "class": "invariant",
+              "desc": "a zero ceiling names its killers and its unlocks",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "exit-band-sane",
+              "class": "realism",
+              "desc": "the exit is a band: low ≤ typical ≤ high, high under 2.6× low (a 1.4/0.7 comp spread times the 0.65/0.5 discount band)",
+              "pass": true
+            },
+            {
+              "id": "exit-under-clean",
+              "class": "realism",
+              "desc": "a derived exit sits below the clean money it derives from",
+              "pass": true
+            },
+            {
+              "id": "wreck-band-sane",
+              "class": "realism",
+              "desc": "the wreck market is a plausible band: no pocket change, high under 4× low",
+              "pass": true
+            },
+            {
+              "id": "wreck-under-clean",
+              "class": "realism",
+              "desc": "no wreck comp used sits at clean money",
+              "pass": true
+            },
+            {
+              "id": "ceiling-ordering",
+              "class": "realism",
+              "desc": "stress ≤ ceiling ≤ break-even",
+              "pass": true
+            },
+            {
+              "id": "contingency-floor",
+              "class": "realism",
+              "desc": "the hidden-damage contingency never sits below the tier floor",
+              "pass": true
+            },
+            {
+              "id": "no-bid-copy-on-refusal",
+              "class": "honesty",
+              "desc": "a no-bid verdict never carries \"Bid to\" copy",
+              "pass": true
+            },
+            {
+              "id": "zero-explains",
+              "class": "honesty",
+              "desc": "a zero ceiling says what ate it and what would have to be true",
+              "pass": true
+            },
+            {
+              "id": "exit-basis-cites",
+              "class": "honesty",
+              "desc": "the exit basis names its hosts or confesses a derivation",
+              "pass": true
+            },
+            {
+              "id": "wreck-is-context",
+              "class": "behavior",
+              "desc": "the verdict does not flip on the wreck market",
+              "pass": true,
+              "spec": "SPEC 45"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "sf90-live-2026-08-18",
+          "description": "Live run 5b16061b (2026-08-18, the first on the ceiling model): 17 typed comps and 9 typed prices as the workers reported them. The comps worker filed the autoastat salvage sales under the rebuilt lane; the price worker returned an SF90XX hood, a front frame section under the panels line, a Novitec aftermarket piece, and a LaFerrari comparison pack. Recorded verbatim; the pipeline must screen them.",
+          "checks": [
+            {
+              "id": "verdict-taxonomy",
+              "class": "invariant",
+              "desc": "the verdict is bid or no bid",
+              "pass": true,
+              "spec": "SPEC 45"
+            },
+            {
+              "id": "one-structure-per-program",
+              "class": "invariant",
+              "desc": "a damage program carries at most one structural line",
+              "pass": true,
+              "spec": "SPEC 43"
+            },
+            {
+              "id": "every-line-has-basis",
+              "class": "invariant",
+              "desc": "every cost line carries a basis and an evidence chip",
+              "pass": true,
+              "spec": "SPEC 36"
+            },
+            {
+              "id": "comps-are-typed",
+              "class": "invariant",
+              "desc": "every comp behind the exit has a positive price and an http(s) source",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "ceiling-solves",
+              "class": "invariant",
+              "desc": "the ceiling is the highest $500 step whose all-in stays at or under discipline",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "zero-names-killers",
+              "class": "invariant",
+              "desc": "a zero ceiling names its killers and its unlocks",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "exit-band-sane",
+              "class": "realism",
+              "desc": "the exit is a band: low ≤ typical ≤ high, high under 2.6× low (a 1.4/0.7 comp spread times the 0.65/0.5 discount band)",
+              "pass": true
+            },
+            {
+              "id": "exit-under-clean",
+              "class": "realism",
+              "desc": "a derived exit sits below the clean money it derives from",
+              "pass": true
+            },
+            {
+              "id": "wreck-band-sane",
+              "class": "realism",
+              "desc": "the wreck market is a plausible band: no pocket change, high under 4× low",
+              "pass": true
+            },
+            {
+              "id": "wreck-under-clean",
+              "class": "realism",
+              "desc": "no wreck comp used sits at clean money",
+              "pass": true
+            },
+            {
+              "id": "ceiling-ordering",
+              "class": "realism",
+              "desc": "stress ≤ ceiling ≤ break-even",
+              "pass": true
+            },
+            {
+              "id": "contingency-floor",
+              "class": "realism",
+              "desc": "the hidden-damage contingency never sits below the tier floor",
+              "pass": true
+            },
+            {
+              "id": "no-bid-copy-on-refusal",
+              "class": "honesty",
+              "desc": "a no-bid verdict never carries \"Bid to\" copy",
+              "pass": true
+            },
+            {
+              "id": "zero-explains",
+              "class": "honesty",
+              "desc": "a zero ceiling says what ate it and what would have to be true",
+              "pass": true
+            },
+            {
+              "id": "exit-basis-cites",
+              "class": "honesty",
+              "desc": "the exit basis names its hosts or confesses a derivation",
+              "pass": true
+            },
+            {
+              "id": "expected-verdict",
+              "class": "behavior",
+              "desc": "verdict is walk",
+              "pass": true
+            },
+            {
+              "id": "wreck-min",
+              "class": "behavior",
+              "desc": "at least 3 wreck comps survive relaning (salvage-auction listings are wreck evidence whatever lane the worker used)",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "panels-max",
+              "class": "behavior",
+              "desc": "off-spec, aftermarket, and structure items never inflate the front panels line past $60,000",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "wreck-is-context",
+              "class": "behavior",
+              "desc": "the verdict does not flip on the wreck market",
+              "pass": true,
+              "spec": "SPEC 45"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "sf90-research-empty",
+          "description": "Every worker returned empty; the report must degrade without invented numbers. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+          "checks": [
+            {
+              "id": "verdict-taxonomy",
+              "class": "invariant",
+              "desc": "the verdict is bid or no bid",
+              "pass": true,
+              "spec": "SPEC 45"
+            },
+            {
+              "id": "one-structure-per-program",
+              "class": "invariant",
+              "desc": "a damage program carries at most one structural line",
+              "pass": true,
+              "spec": "SPEC 43"
+            },
+            {
+              "id": "every-line-has-basis",
+              "class": "invariant",
+              "desc": "every cost line carries a basis and an evidence chip",
+              "pass": true,
+              "spec": "SPEC 36"
+            },
+            {
+              "id": "comps-are-typed",
+              "class": "invariant",
+              "desc": "every comp behind the exit has a positive price and an http(s) source",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "contingency-floor",
+              "class": "realism",
+              "desc": "the hidden-damage contingency never sits below the tier floor",
+              "pass": true
+            },
+            {
+              "id": "no-bid-copy-on-refusal",
+              "class": "honesty",
+              "desc": "a no-bid verdict never carries \"Bid to\" copy",
+              "pass": true
+            },
+            {
+              "id": "expected-verdict",
+              "class": "behavior",
+              "desc": "verdict is walk",
+              "pass": true
+            },
+            {
+              "id": "expected-no-exit",
+              "class": "behavior",
+              "desc": "no exit and no ceiling; the cost side still itemized",
+              "pass": true
+            },
+            {
+              "id": "wreck-is-context",
+              "class": "behavior",
+              "desc": "the verdict does not flip on the wreck market",
+              "pass": true,
+              "spec": "SPEC 45"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "name": "sf90-wreck-market-rich",
+          "description": "Cited wreck prices at 193-262k with a wide clean range holding a 935k outlier. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+          "checks": [
+            {
+              "id": "verdict-taxonomy",
+              "class": "invariant",
+              "desc": "the verdict is bid or no bid",
+              "pass": true,
+              "spec": "SPEC 45"
+            },
+            {
+              "id": "one-structure-per-program",
+              "class": "invariant",
+              "desc": "a damage program carries at most one structural line",
+              "pass": true,
+              "spec": "SPEC 43"
+            },
+            {
+              "id": "every-line-has-basis",
+              "class": "invariant",
+              "desc": "every cost line carries a basis and an evidence chip",
+              "pass": true,
+              "spec": "SPEC 36"
+            },
+            {
+              "id": "comps-are-typed",
+              "class": "invariant",
+              "desc": "every comp behind the exit has a positive price and an http(s) source",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "ceiling-solves",
+              "class": "invariant",
+              "desc": "the ceiling is the highest $500 step whose all-in stays at or under discipline",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "zero-names-killers",
+              "class": "invariant",
+              "desc": "a zero ceiling names its killers and its unlocks",
+              "pass": true,
+              "spec": "SPEC 39"
+            },
+            {
+              "id": "exit-band-sane",
+              "class": "realism",
+              "desc": "the exit is a band: low ≤ typical ≤ high, high under 2.6× low (a 1.4/0.7 comp spread times the 0.65/0.5 discount band)",
+              "pass": true
+            },
+            {
+              "id": "exit-under-clean",
+              "class": "realism",
+              "desc": "a derived exit sits below the clean money it derives from",
+              "pass": true
+            },
+            {
+              "id": "wreck-band-sane",
+              "class": "realism",
+              "desc": "the wreck market is a plausible band: no pocket change, high under 4× low",
+              "pass": true
+            },
+            {
+              "id": "wreck-under-clean",
+              "class": "realism",
+              "desc": "no wreck comp used sits at clean money",
+              "pass": true
+            },
+            {
+              "id": "ceiling-ordering",
+              "class": "realism",
+              "desc": "stress ≤ ceiling ≤ break-even",
+              "pass": true
+            },
+            {
+              "id": "contingency-floor",
+              "class": "realism",
+              "desc": "the hidden-damage contingency never sits below the tier floor",
+              "pass": true
+            },
+            {
+              "id": "no-bid-copy-on-refusal",
+              "class": "honesty",
+              "desc": "a no-bid verdict never carries \"Bid to\" copy",
+              "pass": true
+            },
+            {
+              "id": "zero-explains",
+              "class": "honesty",
+              "desc": "a zero ceiling says what ate it and what would have to be true",
+              "pass": true
+            },
+            {
+              "id": "exit-basis-cites",
+              "class": "honesty",
+              "desc": "the exit basis names its hosts or confesses a derivation",
+              "pass": true
+            },
+            {
+              "id": "wreck-max",
+              "class": "behavior",
+              "desc": "no wreck comp used above $300,000 (a retail figure cannot bleed into the hammer band)",
+              "pass": true,
+              "spec": "SPEC 44"
+            },
+            {
+              "id": "wreck-is-context",
+              "class": "behavior",
+              "desc": "the verdict does not flip on the wreck market",
+              "pass": true,
+              "spec": "SPEC 45"
+            }
+          ],
+          "pass": true
+        }
+      ]
+    }
+  }
+}

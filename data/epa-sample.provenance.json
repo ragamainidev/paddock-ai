@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "source": "DOE/EPA FuelEconomy.gov",
+  "sourceUrl": "https://www.fueleconomy.gov/feg/epadata/vehicles.csv",
+  "documentationUrl": "https://www.fueleconomy.gov/feg/ws/index.shtml",
+  "catalogUrl": "https://catalog.data.gov/dataset/fuel-economy-label-and-cafe-data",
+  "licenseUrl": "https://edg.epa.gov/EPA_Data_License.html",
+  "sourceSha256": "7789770b0f18e19c2d61c1040fbc8fe43f8e7121d0f9ae4ad3d26b35a2dad6f6",
+  "sampleSha256": "575d0e707d37514da4841a065d0eef1c38dd0ac55dffa3531fa36f7da1c38eac",
+  "sourceRows": 50242,
+  "rowCount": 9277,
+  "yearMin": 1984,
+  "yearMax": 2027,
+  "selection": "scripts/subset-spec.ts: enthusiast EPA model families plus FNV-1a(source id) modulo 100 = 0; source order and columns preserved",
+  "granularity": "EPA vehicle configuration; not exhaustive trims, fitment or generation evidence",
+  "generationCommand": "pnpm exec tsx scripts/make-subset.ts --csv /path/to/official/vehicles.csv --out data/epa-sample.csv"
+}

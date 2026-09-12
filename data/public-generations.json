@@ -1,0 +1,148 @@
+{
+  "families": [
+    {
+      "make": "Audi",
+      "family": "R8",
+      "modelLike": [
+        "R8%"
+      ],
+      "modelTokens": [
+        "r8"
+      ],
+      "generations": [],
+      "compiledOn": "2026-09-13",
+      "identitySourceIds": [
+        "24167"
+      ],
+      "identityCitations": [
+        "https://www.fueleconomy.gov/ws/rest/vehicle/24167"
+      ]
+    },
+    {
+      "make": "Ford",
+      "family": "Mustang",
+      "modelLike": [
+        "Mustang%"
+      ],
+      "modelTokens": [
+        "mustang"
+      ],
+      "generations": [],
+      "compiledOn": "2026-09-13",
+      "identitySourceIds": [
+        "10730"
+      ],
+      "identityCitations": [
+        "https://www.fueleconomy.gov/ws/rest/vehicle/10730"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "family": "Camaro",
+      "modelLike": [
+        "Camaro%"
+      ],
+      "modelTokens": [
+        "camaro"
+      ],
+      "generations": [],
+      "compiledOn": "2026-09-13",
+      "identitySourceIds": [
+        "10688"
+      ],
+      "identityCitations": [
+        "https://www.fueleconomy.gov/ws/rest/vehicle/10688"
+      ]
+    },
+    {
+      "make": "Ford",
+      "family": "Focus",
+      "modelLike": [
+        "Focus%"
+      ],
+      "modelTokens": [
+        "focus"
+      ],
+      "generations": [],
+      "compiledOn": "2026-09-13",
+      "identitySourceIds": [
+        "15787"
+      ],
+      "identityCitations": [
+        "https://www.fueleconomy.gov/ws/rest/vehicle/15787"
+      ]
+    },
+    {
+      "make": "Ford",
+      "family": "Fiesta",
+      "modelLike": [
+        "Fiesta%"
+      ],
+      "modelTokens": [
+        "fiesta"
+      ],
+      "generations": [],
+      "compiledOn": "2026-09-13",
+      "identitySourceIds": [
+        "30035"
+      ],
+      "identityCitations": [
+        "https://www.fueleconomy.gov/ws/rest/vehicle/30035"
+      ]
+    },
+    {
+      "make": "Alfa Romeo",
+      "family": "Giulia",
+      "modelLike": [
+        "Giulia%"
+      ],
+      "modelTokens": [
+        "giulia"
+      ],
+      "generations": [],
+      "compiledOn": "2026-09-13",
+      "identitySourceIds": [
+        "38370"
+      ],
+      "identityCitations": [
+        "https://www.fueleconomy.gov/ws/rest/vehicle/38370"
+      ]
+    },
+    {
+      "make": "Lamborghini",
+      "family": "Gallardo",
+      "modelLike": [
+        "Gallardo%"
+      ],
+      "modelTokens": [
+        "gallardo"
+      ],
+      "generations": [],
+      "compiledOn": "2026-09-13",
+      "identitySourceIds": [
+        "23063"
+      ],
+      "identityCitations": [
+        "https://www.fueleconomy.gov/ws/rest/vehicle/23063"
+      ]
+    },
+    {
+      "make": "Lamborghini",
+      "family": "Huracan",
+      "modelLike": [
+        "Huracan%"
+      ],
+      "modelTokens": [
+        "huracan"
+      ],
+      "generations": [],
+      "compiledOn": "2026-09-13",
+      "identitySourceIds": [
+        "34921"
+      ],
+      "identityCitations": [
+        "https://www.fueleconomy.gov/ws/rest/vehicle/34921"
+      ]
+    }
+  ]
+}

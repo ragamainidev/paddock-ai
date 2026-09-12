@@ -1,0 +1,6 @@
+ymm_id,Make,Model,Year,Engine,Submodel,Trim,Body,Cylinder_Type_Name,Drive_Type,Engine_Block_Type,Engine_CC,Engine_Cylinders,Engine_Liter_Display,Fuel_Type_Name,NumDoors,Aspiration
+synthetic-1,Fixture Motors,Example Coupe,2001,test engine,Example Sport,Example Sport Two Door,Coupe,DOHC,RWD,V,3200,6,3.2L,GAS,2,Naturally Aspirated
+synthetic-2,Fixture Motors,Example Coupe,2002,,,,,,,,,,,,,
+synthetic-3,Fixture Commercial,Example Tractor,2003,test diesel,N/A,N/R,Tractor,U/K,6 X 4,-,9000,-,9.0L,DIESEL,U/K,-
+synthetic-4,Fixture Electric,Example Hybrid,2004,,,,Hatchback,,FWD,L,1600,4,1.6L,FULL HYBRID EV-GAS (FHEV),4,Naturally Aspirated
+synthetic-5,Fixture Legacy,Example Roadster,2005,,,,Roadster,,RWD,L,1250,4,N/A,GAS,U/K,N/A

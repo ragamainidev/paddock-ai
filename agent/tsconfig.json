@@ -1,0 +1,6 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": { "incremental": false, "plugins": [] },
+  "include": ["./**/*.ts", "../evals/agent/*.test.ts", "../scripts/agent-*.ts"],
+  "exclude": ["../node_modules"]
+}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- The mark the user picked: a classic long-hood coupe in cream on an
+       orange roundel, flat style with a 45° long shadow. Redrawn as vector
+       from the supplied asset. -->
+  <defs>
+    <clipPath id="disc"><circle cx="256" cy="256" r="256"/></clipPath>
+  </defs>
+  <g clip-path="url(#disc)">
+    <circle cx="256" cy="256" r="256" fill="#EA7148"/>
+    <!-- long shadow cast by the silhouette, darker orange, 45° -->
+    <path d="M84 312 L446 292 L760 606 L398 626 Z" fill="#D15F35"/>
+    <!-- body: classic rear-engine coupe profile, nose left -->
+    <path fill="#F4EAD5" d="
+      M70 296
+      C68 278 74 262 92 252
+      C118 238 150 232 186 228
+      C198 208 216 190 242 182
+      C270 173 302 174 326 182
+      C348 189 362 200 372 212
+      C398 216 420 224 434 236
+      C444 245 448 262 447 276
+      C446 290 442 296 434 300
+      L426 302
+      C424 278 404 260 380 260
+      C356 260 336 278 334 302
+      L196 306
+      C194 282 174 264 150 264
+      C126 264 106 282 104 306
+      L86 306
+      C76 304 71 302 70 296 Z"/>
+    <!-- small roof-edge bump, as in the source -->
+    <path fill="#F4EAD5" d="M224 180 L236 172 L250 171 L254 179 Z"/>
+    <!-- windows: two orange panes with a cream pillar between -->
+    <path fill="#EA7148" d="M250 192 C264 187 282 186 296 190 L302 226 L246 228 Z"/>
+    <path fill="#EA7148" d="M238 194 L232 230 L206 232 C212 216 222 202 238 194 Z"/>
+    <!-- wheels: cream discs with orange centers -->
+    <circle cx="150" cy="306" r="40" fill="#F4EAD5"/>
+    <circle cx="150" cy="306" r="21" fill="#EA7148"/>
+    <circle cx="380" cy="302" r="40" fill="#F4EAD5"/>
+    <circle cx="380" cy="302" r="21" fill="#EA7148"/>
+  </g>
+</svg>

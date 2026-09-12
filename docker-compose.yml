@@ -1,0 +1,25 @@
+# Local infrastructure. Identifiers below predate the rename to 'paddock'
+# and are kept so the existing volume (and its run history) keeps working.
+# Postgres persists inspection/salvage runs, their
+# event streams, and trace spans. Port 5433 on the host to avoid colliding
+# with any system Postgres. `pnpm db:up` starts this and runs migrations.
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: panelgap-db
+    environment:
+      POSTGRES_USER: panelgap
+      POSTGRES_PASSWORD: panelgap
+      POSTGRES_DB: panelgap
+    ports:
+      - '127.0.0.1:5433:5432'
+    volumes:
+      - panelgap-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U panelgap -d panelgap']
+      interval: 2s
+      timeout: 2s
+      retries: 15
+
+volumes:
+  panelgap-pgdata:

@@ -1,0 +1,149 @@
+name: ci
+
+# Runs once per PR head and once per push to main. Local hooks are the
+# primary gate (pre-commit: prettier, eslint, typecheck, docs:check;
+# pre-push: tests, offline eval); CI is the backstop that proves it on a
+# clean machine. docs/git-workflow.md §4.
+#
+# Three jobs:
+#   checks        code changes only — typecheck, lint, test (with a
+#                 Postgres service, so the run-store contract runs against
+#                 all three stores), the offline evals, and the Next
+#                 production build. Required.
+#   docs          unguarded — pnpm docs:check is the only gate a docs-only
+#                 PR still has to pass, so it never sits behind a filter.
+#                 Required once the owner adds it to the ruleset.
+#   agent-runtime code changes only — the live Eve runtime evals and the
+#                 eve build. A failure fails the workflow.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# A new push to the same branch/PR cancels the run in flight.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  # paths-filter lists a PR's changed files through the API.
+  pull-requests: read
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      code: ${{ steps.filter.outputs.code }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          # A file counts as code when EVERY pattern matches, i.e. it is
+          # neither under docs/ nor a markdown file.
+          predicate-quantifier: 'every'
+          filters: |
+            code:
+              - '!docs/**'
+              - '!**/*.md'
+
+  checks:
+    needs: changes
+    # Docs-only changes skip the expensive job; a skipped job still
+    # satisfies a required status check.
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # The run-store contract has three implementations and only two of them
+    # need nothing (memory, in-memory libSQL). This service is what makes
+    # the Postgres arm run (SPEC 30-31). Port 5434 deliberately differs from
+    # the 5433 that POSTGRES_URL defaults to: nothing but the contract test
+    # is meant to find a database here, so the rest of the suite and the
+    # build keep resolving to memory exactly as they do on a laptop.
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: panelgap
+          POSTGRES_PASSWORD: panelgap
+          POSTGRES_DB: panelgap
+        ports:
+          - 5434:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      PG_CONTRACT_URL: postgres://panelgap:panelgap@localhost:5434/panelgap
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint
+      # The contract test writes real rows, so the schema has to exist.
+      - run: pnpm db:migrate
+        env:
+          POSTGRES_URL: ${{ env.PG_CONTRACT_URL }}
+      - run: pnpm test
+        env:
+          POSTGRES_TEST_URL: ${{ env.PG_CONTRACT_URL }}
+      # Offline eval: deterministic interpret + SQL resolve against the committed
+      # subset DB, plus the fixture-driven agent suites. No network, no keys.
+      - run: pnpm eval
+      # The artifact writers are reproducible: a re-run on unchanged
+      # behavior may differ from the committed artifacts only in the
+      # date/sha header. Anything else means the committed artifacts are
+      # stale or a writer's formatting does not survive lint-staged.
+      - run: pnpm eval:check
+      - run: pnpm eval:decisions
+      - run: pnpm eval:check
+      # The production build is the only check that compiles every route.
+      - run: pnpm build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+
+  docs:
+    # No paths filter: docs:check is the whole gate for a docs-only PR, and
+    # it also validates .env.example coverage, SPEC test titles, DESIGN.md
+    # headings and CLAUDE.md paths against the code.
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm docs:check
+
+  agent-runtime:
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    # The actual runtime fixture evaluation is a release gate. It starts
+    # Eve with isolated state and makes no paid provider calls.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # Starts the real Eve runtime with isolated state and fixture-only providers.
+      - run: pnpm eval:agent
+      # The runtime artifact is reproducible too: only its generated-at header
+      # may differ from the committed one.
+      - run: pnpm eval:check
+      - run: pnpm agent:build

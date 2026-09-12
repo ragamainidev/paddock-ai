@@ -1,0 +1,209 @@
+{
+  "name": "sf90-wreck-market-rich",
+  "note": "Cited wreck prices at 193-262k with a wide clean range holding a 935k outlier. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+  "lotId": "sf90-front-il",
+  "triage": {
+    "areas": [
+      {
+        "area": "front clip",
+        "kind": "structural",
+        "photos": [0, 3, 4, 10],
+        "severity": "heavy",
+        "description": "Entire front fascia, headlights, and lower crash structure torn away; black structural rail under hood visibly bent/exposed in photo 4, front subframe area looks disturbed. This goes beyond bumper cover replacement into front crash-structure repair."
+      },
+      {
+        "area": "right front corner",
+        "kind": "structural",
+        "photos": [0],
+        "severity": "heavy",
+        "description": "Right front wheel/upright pushed back into the arch with corner bodywork and bumper structure gone, brake caliper and suspension arm exposed — consistent with a hard right-front impact bending the corner structure, not just cosmetic loss."
+      },
+      {
+        "area": "left front corner",
+        "kind": "cosmetic",
+        "photos": [1],
+        "severity": "heavy",
+        "description": "Left mirror hanging, left headlight/bumper corner missing; no clear structural rail deformation visible from this angle but panel loss is total."
+      },
+      {
+        "area": "rear clip",
+        "kind": "cosmetic",
+        "photos": [2, 5, 9],
+        "severity": "moderate",
+        "description": "Rear bumper cover, diffuser trim, and taillight housings removed exposing exhaust tips and hybrid module wiring; rear crash can and body lines appear straight with no visible crush or tearing, suggesting disassembly/parts removal rather than heavy impact damage."
+      },
+      {
+        "area": "wheels/suspension",
+        "kind": "mechanical",
+        "photos": [0, 1],
+        "severity": "heavy",
+        "description": "Right front wheel angle and exposed upright/caliper in photo 0 suggest bent suspension or hub damage from the front impact; other wheels appear seated normally."
+      },
+      {
+        "area": "windshield/glass",
+        "kind": "cosmetic",
+        "photos": [8],
+        "severity": "moderate",
+        "description": "Corner crack visible in windshield glass behind the instrument cluster in photo 8."
+      },
+      {
+        "area": "electrical",
+        "kind": "electrical",
+        "photos": [8, 5, 1],
+        "severity": "moderate",
+        "description": "Instrument cluster shows multiple warning lights and 'system not programmed' message, plus visible hybrid high-voltage connectors/wiring hanging loose at the rear — high-voltage isolation check is mandatory before any handling."
+      },
+      {
+        "area": "interior",
+        "kind": "cosmetic",
+        "photos": [6, 7],
+        "severity": "light",
+        "description": "Seats, dash, and steering wheel appear undamaged and airbags look undeployed."
+      }
+    ],
+    "overall": "borderline",
+    "confidence": 0.55,
+    "fireEvidence": false,
+    "observations": [
+      {
+        "note": "Front right corner completely torn away — bumper, corner structure, and right front wheel/upright exposed with brake caliper and suspension arm visible, wheel pushed back into arch.",
+        "photo": 0
+      },
+      {
+        "note": "Left side profile shows left front corner sheared off (mirror hanging, headlight/bumper gone) and rear right corner also stripped down to bare crash structure/wiring, wheel intact but suspension geometry looks disturbed.",
+        "photo": 1
+      },
+      {
+        "note": "Rear three-quarter view confirms rear bumper cover, diffuser trim, and taillight housings removed/damaged exposing exhaust and rear crash-can structure; no obvious frame tearing here, mostly stripped panels.",
+        "photo": 2
+      },
+      {
+        "note": "Front-quarter view shows entire front clip missing forward of the wheels — bumper, splitter, headlights, and radiator support area gone, front subframe/crash structure visible and appears deformed/pushed.",
+        "photo": 3
+      },
+      {
+        "note": "Straight-on front view shows both headlights gone, hood leading edge and front fascia crushed/torn, black lower structural rail visibly bent/exposed under the hood line.",
+        "photo": 4
+      },
+      {
+        "note": "Rear straight-on view shows full rear bumper/diffuser assembly removed, exposing rear crash structure, exhaust tips, and hybrid high-voltage components hanging - no visible tearing of rear rails, appears more disassembled than crushed.",
+        "photo": 5
+      },
+      {
+        "note": "Interior driver/passenger seats look clean and undamaged, no airbag deployment visible on dash or steering wheel.",
+        "photo": 6
+      },
+      {
+        "note": "Dash and passenger side interior intact, steering wheel airbag cover appears undeployed.",
+        "photo": 7
+      },
+      {
+        "note": "Instrument cluster powered on showing 3004 miles, multiple warning lights illuminated (battery/charge, system faults) consistent with electrical/hybrid system disruption; windshield behind cluster shows spider-crack damage in corner.",
+        "photo": 8
+      },
+      {
+        "note": "Rear deck/engine cover area shows intact black clamshell panel and taillight strip, but lower bumper/diffuser missing exposing exhaust and crash structure - matches photo 5.",
+        "photo": 9
+      },
+      {
+        "note": "Hood/cowl area shows only light surface scuffing, hood panel itself retains shape, main damage is below at bumper/fascia line.",
+        "photo": 10
+      },
+      {
+        "note": "VIN and Ferrari manufacture tag, no damage shown - documentation photo.",
+        "photo": 11
+      }
+    ],
+    "floodEvidence": false,
+    "drivetrainRisk": "Mid-mounted V8/hybrid drivetrain sits behind the visible damage and isn't directly shown, but the front impact severity (bent front structure, disturbed right-front suspension) raises risk of subframe misalignment affecting front-mounted hybrid motor/inverter components; rear hybrid module wiring is exposed and disturbed, so high-voltage system integrity must be verified before any drivetrain work.",
+    "airbagsDeployed": "no"
+  },
+  "evidence": {
+    "comps": [
+      {
+        "lane": "clean",
+        "outcome": "sold",
+        "price": 506000,
+        "year": 2021,
+        "date": "2025-05",
+        "title": "clean",
+        "url": "https://cars.bonhams.com/auction/28793/lot/11/2021-ferrari-sf90-stradale-chassis-no-zff95nmb000272926/",
+        "source": "cars.bonhams.com"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 389995,
+        "year": 2021,
+        "title": "clean",
+        "url": "https://www.cars.com/shopping/ferrari-sf90_stradale-2021/",
+        "source": "cars.com",
+        "note": "nationwide low ask"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 439506,
+        "year": 2021,
+        "title": "clean",
+        "url": "https://www.cars.com/shopping/ferrari-sf90_stradale-2021/",
+        "source": "cars.com",
+        "note": "nationwide average ask"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 515000,
+        "year": 2021,
+        "title": "clean",
+        "url": "https://www.autoevolution.com/news/owners-sells-ferrari-sf90-stradale-for-278000-under-sticker-depreciation-is-a-killer-256955.html",
+        "source": "autoevolution.com",
+        "note": "top of the typical low-mile retail band"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 935000,
+        "year": 2021,
+        "title": "clean",
+        "variant": "Assetto Fiorano",
+        "url": "https://sothebysmotorsport.com/auction/2021-ferrari-sf90stradaleassettofiorano-449",
+        "source": "sothebysmotorsport.com",
+        "note": "special-series outlier"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "sold",
+        "price": 262000,
+        "year": 2021,
+        "date": "2025-05-09",
+        "title": "salvage",
+        "url": "https://autoastat.com/en/vehicle/ZFF95NLA4M0265120-56792164",
+        "source": "autoastat.com"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "bid_no_sale",
+        "price": 193000,
+        "year": 2021,
+        "date": "2025-05-06",
+        "title": "salvage",
+        "url": "https://autoastat.com/en/vehicle/ZFF95NLA4M0265120-56705499",
+        "source": "autoastat.com"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "bid_no_sale",
+        "price": 157000,
+        "title": "salvage",
+        "damage": "flood, certificate of destruction",
+        "url": "https://www.thedrive.com/news/buy-this-flood-damaged-1m-ferrari-sf90-stradale-on-copart-we-dare-you",
+        "source": "thedrive.com"
+      }
+    ],
+    "prices": []
+  },
+  "expect": {
+    "wreckMax": 300000
+  }
+}

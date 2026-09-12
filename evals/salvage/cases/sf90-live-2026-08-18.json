@@ -1,0 +1,365 @@
+{
+  "name": "sf90-live-2026-08-18",
+  "note": "Live run 5b16061b (2026-08-18, the first on the ceiling model): 17 typed comps and 9 typed prices as the workers reported them. The comps worker filed the autoastat salvage sales under the rebuilt lane; the price worker returned an SF90XX hood, a front frame section under the panels line, a Novitec aftermarket piece, and a LaFerrari comparison pack. Recorded verbatim; the pipeline must screen them.",
+  "lotId": "sf90-front-il",
+  "triage": {
+    "areas": [
+      {
+        "area": "front clip",
+        "kind": "cosmetic",
+        "photos": [0, 3, 4, 10],
+        "severity": "heavy",
+        "description": "Front bumper cover, both headlights, and splitter are torn off/missing entirely on both corners; underlying crash-can/bumper beam visible but no obvious rail bending in photos."
+      },
+      {
+        "area": "right front corner",
+        "kind": "mechanical",
+        "photos": [0],
+        "severity": "heavy",
+        "description": "Right front fender and bumper gone, wheel sits at a slightly toed-out angle with brake caliper and knuckle exposed - consistent with a hard corner impact possibly bending suspension links or the knuckle itself."
+      },
+      {
+        "area": "left front corner",
+        "kind": "cosmetic",
+        "photos": [1],
+        "severity": "moderate",
+        "description": "Left mirror torn loose and hanging by wiring, left fender edge damaged, but less severe than right side."
+      },
+      {
+        "area": "rear clip",
+        "kind": "electrical",
+        "photos": [1, 2, 5, 9],
+        "severity": "heavy",
+        "description": "Rear bumper fascia and diffuser fully removed, exposing exhaust, cooling lines, and orange high-voltage hybrid cabling/connectors - these need isolation testing before any handling."
+      },
+      {
+        "area": "windshield/glass",
+        "kind": "cosmetic",
+        "photos": [8],
+        "severity": "light",
+        "description": "Possible small crack or chip visible in windshield reflection near dash cluster; otherwise glass appears intact in other shots."
+      },
+      {
+        "area": "interior",
+        "kind": "cosmetic",
+        "photos": [6, 7, 8],
+        "severity": "light",
+        "description": "Seats, dash, wheel and airbag covers appear undamaged and un-deployed; odometer reads only 3004 miles."
+      },
+      {
+        "area": "underbody",
+        "kind": "mechanical",
+        "photos": [0, 3, 5, 9],
+        "severity": "moderate",
+        "description": "With both bumper covers off, front and rear crash structures and cooling/hybrid plumbing are visible but no fluid leaks or torn subframe members are evident in these angles - hidden damage still possible beneath tub."
+      }
+    ],
+    "overall": "borderline",
+    "confidence": 0.55,
+    "fireEvidence": false,
+    "observations": [
+      {
+        "note": "Front right corner completely torn away - bumper, fender, headlight all missing; front right wheel/suspension knuckle exposed with brake caliper visible and wheel pushed at odd angle, suggesting suspension damage.",
+        "photo": 0
+      },
+      {
+        "note": "Left side profile shows front bumper/fender destroyed on left front corner too, mirror hanging by wire; rear bumper cover also removed exposing hybrid wiring and structure.",
+        "photo": 1
+      },
+      {
+        "note": "Rear three-quarter view shows rear bumper fascia completely removed, exposing exhaust, diffuser structure, and orange high-voltage cabling; right side skirt scraped.",
+        "photo": 2
+      },
+      {
+        "note": "Front view confirms both front corners deformed/missing bumper and headlights, front splitter hanging, radiator support area exposed but no visible frame rail crush.",
+        "photo": 3
+      },
+      {
+        "note": "Overhead front shot shows hood and cowl intact but bumper beam and headlight brackets torn away at both corners, indicating a broad frontal impact.",
+        "photo": 4
+      },
+      {
+        "note": "Rear straight-on view: bumper cover gone, taillights loose, diffuser panel hanging, exhaust tips visible, hybrid module and orange HV cable exposed - electrical exposure risk.",
+        "photo": 5
+      },
+      {
+        "note": "Interior driver/passenger seats look clean and undamaged, airbag covers on wheel and dash intact and not deployed.",
+        "photo": 6
+      },
+      {
+        "note": "Interior wide shot shows dash, wheel, and seats undamaged, steering airbag cover intact.",
+        "photo": 7
+      },
+      {
+        "note": "Dash cluster powered on showing only 3004 miles, multiple warning icons lit (likely due to disconnected sensors/bumpers), windshield has crack/chip visible in reflection area.",
+        "photo": 8
+      },
+      {
+        "note": "Rear engine cover/glass area looks intact, Ferrari badge and taillight trim present, bumper substructure below shows same missing cover as other rear photos.",
+        "photo": 9
+      },
+      {
+        "note": "Hood/cowl close-up shows only minor smudges, no structural deformation, panel gaps look factory.",
+        "photo": 10
+      },
+      {
+        "note": "VIN and Ferrari data plate tag, confirms 2021 SF90 Stradale, no damage information.",
+        "photo": 11
+      }
+    ],
+    "floodEvidence": false,
+    "drivetrainRisk": "No engine or transaxle components appear disturbed in these shots; the mid-engine bay isn't shown, but the front (motor/inverter area) and rear (ICE/hybrid) bumper removal expose HV cabling that must be isolation-checked before any drivetrain work - risk is more electrical/hybrid-system than mechanical drivetrain damage.",
+    "airbagsDeployed": "no"
+  },
+  "evidence": {
+    "comps": [
+      {
+        "url": "https://www.thedrive.com/news/buy-this-flood-damaged-1m-ferrari-sf90-stradale-on-copart-we-dare-you",
+        "lane": "rebuilt",
+        "note": "Flooded $1M Ferrari SF90 Stradale Pops Up for Sale at Salvage Auction · This is a flood-damaged wreck lot at Copart carrying a certificate of destruction (cannot ever be re-registered), NOT a finished/rebuilt road-registered car — included only because a price appeared in search results; it does not answer the rebuilt-title-sale question.year_model_note: appears to be a 2022ish SF90, not confirmed year unununknown, title effectively non-repairable ununknown",
+        "price": 157000,
+        "source": "thedrive.com",
+        "outcome": "bid_no_sale"
+      },
+      {
+        "url": "https://autoastat.com/en/vehicle/ZFF95NLA4M0265120-56705499",
+        "lane": "rebuilt",
+        "note": "2021 Ferrari SF90 Stradale $193000 - autoAstat · Listed as a Copart salvage-auction final-bid/sale record for a 2021 SF90 Stradale (VIN ZFF95NLA4M0265120, auction date 06/May/2025) — this is a wreck-auction result, not a finished/rebuilt road-registered car sale, and is not truly on-topic for this rebuilt-title-exit research.",
+        "price": 193000,
+        "source": "autoastat.com",
+        "outcome": "sold"
+      },
+      {
+        "url": "https://www.classic.com/m/ferrari/sf90/stradale/",
+        "lane": "clean",
+        "note": "Ferrari SF90 Stradale Market - CLASSIC.COM · Highest recorded sale for a 2021 SF90 Stradale, Jan 15, 2022 (clean title)",
+        "year": 2021,
+        "price": 935000,
+        "source": "classic.com",
+        "outcome": "sold",
+        "variant": "Stradale"
+      },
+      {
+        "url": "https://www.classic.com/m/ferrari/sf90/stradale/",
+        "lane": "clean",
+        "note": "Ferrari SF90 Stradale Market - CLASSIC.COM · Lowest recorded sale for a 2021 SF90 Stradale, May 17, 2025 (clean title)",
+        "year": 2021,
+        "price": 275625,
+        "source": "classic.com",
+        "outcome": "sold",
+        "variant": "Stradale"
+      },
+      {
+        "url": "https://carsandbids.com/auctions/rkP7q0WL/2022-ferrari-sf90-stradale",
+        "lane": "clean",
+        "note": "2022 Ferrari SF90 Stradale VIN: ZFF95NLA1N0272205 for Sale - Cars & Bids · entorion Carfax, Assetto Fiorano package, sold Sept 2025 per Cars & Bids listing and autoevolution recap",
+        "year": 2022,
+        "price": 485000,
+        "source": "carsandbids.com",
+        "mileage": 1600,
+        "outcome": "sold",
+        "variant": "Assetto Fiorano"
+      },
+      {
+        "url": "https://www.dupontregistry.com/car/ferrari/sf90--stradale/2021/ZFF95NLA2M0267190/592285",
+        "lane": "clean",
+        "note": "2021 Ferrari SF90 Stradale for Sale | duPont REGISTRY · clean title, base coupe variant, dealer asking price listing, 2,009 miles, current listing (2026)",
+        "price": 434895,
+        "source": "dupontregistry.com",
+        "outcome": "ask"
+      },
+      {
+        "url": "https://news.dupontregistry.com/blogs/for-sale/641-mile-2021-ferrari-sf90-stradale-listed-for-sale",
+        "lane": "clean",
+        "note": "641-Mile 2021 Ferrari SF90 Stradale Listed For Sale – duPont REGISTRY News · heavily optioned, low-mileage, extensive carbon fiber package car listed at Ferrari of San Francisco, 641 miles, an outlier high-option asking price",
+        "price": 958888,
+        "source": "news.dupontregistry.com",
+        "outcome": "ask"
+      },
+      {
+        "url": "https://x.com/duPontREGISTRY/status/2045708803706949988",
+        "lane": "clean",
+        "note": "dupontregistry on X: 2021 Ferrari SF90 Stradale presented in Rosso Dino",
+        "price": 427988,
+        "source": "x.com",
+        "outcome": "ask",
+        "variant": "Rosso Dino paint"
+      },
+      {
+        "url": "https://x.com/duPontREGISTRY/status/1860370313764057370",
+        "lane": "clean",
+        "note": "2021 Ferrari SF90 Stradale | Asking Price: $494995",
+        "price": 494995,
+        "source": "x.com",
+        "outcome": "ask"
+      },
+      {
+        "url": "https://www.facebook.com/dupontregistry/posts/2021-ferrari-sf90-stradale-asking-price-478850-this-stunning-one-of-a-kind-rosso/650695374141987/",
+        "lane": "clean",
+        "note": "2021 Ferrari SF90 Stradale | Asking Price: $478,850",
+        "price": 478850,
+        "source": "facebook.com",
+        "outcome": "ask",
+        "variant": "Rosso, one-of-a-kind spec"
+      },
+      {
+        "url": "https://www.carsforsale.com/2021-ferrari-sf90-stradale-for-sale-C2498294",
+        "lane": "clean",
+        "note": "2021 Ferrari SF90 Stradale For Sale - Carsforsale.com® · 765 miles, low-mileage dealer listing",
+        "price": 515080,
+        "source": "carsforsale.com",
+        "mileage": 765,
+        "outcome": "ask"
+      },
+      {
+        "url": "https://www.cars.com/shopping/ferrari-sf90_stradale-2021/",
+        "lane": "clean",
+        "note": "Used 2021 Ferrari SF90 Stradale for Sale Near Me | Cars.com · Cars.com states nationwide average asking price and starting price for 2021 SF90 Stradale listings",
+        "price": 439506,
+        "source": "cars.com",
+        "outcome": "ask"
+      },
+      {
+        "url": "https://www.cars.com/research/ferrari-sf90_stradale-2021/",
+        "lane": "clean",
+        "note": "2021 Ferrari SF90 Stradale - Specs, Prices, MPG, Reviews & Photos | Cars.com · Certified 2021 SF90 Stradale listing near buyer location",
+        "price": 430240,
+        "source": "cars.com",
+        "outcome": "ask",
+        "variant": "Certified Pre-Owned"
+      },
+      {
+        "url": "https://www.cars.com/research/ferrari-sf90_stradale-2021/",
+        "lane": "clean",
+        "note": "2021 Ferrari SF90 Stradale - Specs, Prices, MPG, Reviews & Photos | Cars.com · Used 2021 SF90 Stradale Base listing near buyer location",
+        "price": 475900,
+        "source": "cars.com",
+        "outcome": "ask",
+        "variant": "Base"
+      },
+      {
+        "url": "https://www.charlottemclaren.com/2021-ferrari-sf90-stradale-c-4387.htm",
+        "lane": "clean",
+        "note": "Used 2021 Ferrari SF90 Stradale For Sale ($449,996) | McLaren Charlotte Stock #266304 · dealer listing with extensive carbon fiber option package",
+        "price": 419996,
+        "source": "charlottemclaren.com",
+        "outcome": "ask"
+      },
+      {
+        "url": "https://www.ferrarislc.com/inventory/certified-pre-owned-2021-ferrari-sf90-stradale-awd-2dr-car-zff95nla8m0266755/",
+        "lane": "clean",
+        "note": "Certified Pre-Owned 2021 Ferrari SF90 Stradale 2dr Car in Salt Lake City · CPO, only 599 miles",
+        "price": 494880,
+        "source": "ferrarislc.com",
+        "mileage": 599,
+        "outcome": "ask",
+        "variant": "Certified Pre-Owned, Rosso Scuderia"
+      },
+      {
+        "url": "https://autoastat.com/en/vehicle/ZFF95NLA4M0265120-56792164",
+        "lane": "wreck",
+        "note": "ZFF95NLA4M0265120 2021 Ferrari SF90 Stradale $262000 - autoAstat - Statistic of salvage cars auctions · Min bid not met, reserve not satisfied; same VIN as the IAAI-listed front-end-damage car (front end/left front collision damage per bid.cars listing); CA salvage certificate; listed odometer ~5,000 mi (rounded); Copart Rancho Cucamonga, CA, auction date 09/May/2025.5000000, damage listed by scraper as 'Normal wear & tear' but corresponds to the front-end wrecked VIN.5000000, ",
+        "price": 262000,
+        "source": "autoastat.com",
+        "outcome": "bid_no_sale"
+      }
+    ],
+    "prices": [
+      {
+        "low": 4999,
+        "url": "https://parts4usa.com/products/ferrari-sf90-stradalle-front-fender-right-side-oem-part-number",
+        "high": 4999,
+        "item": "Front fender RH, OEM (Shield version)",
+        "kind": "part_new",
+        "line": "front.panels",
+        "note": "Ferrari SF90 Stradale Front fender RH side, OEM",
+        "source": "parts4usa.com"
+      },
+      {
+        "low": 25000,
+        "url": "https://parts4usa.com/products/ferrari-sf90-stradale-front-frame-complete-oem",
+        "high": 25000,
+        "item": "Front frame complete (incl. bumper, fenders, hood structure), OEM",
+        "kind": "part_new",
+        "line": "front.panels",
+        "note": "Ferrari SF90 Stradale Front frame complete, OEM",
+        "source": "parts4usa.com"
+      },
+      {
+        "low": 49999,
+        "url": "https://parts4usa.com/products/ferrari-sf90xx-stradale-front-hood-oem-part-number",
+        "high": 49999,
+        "item": "Front hood, carbon fiber, OEM (SF90XX variant, painted)",
+        "kind": "part_new",
+        "line": "front.panels",
+        "note": "Ferrari SF90xx Stradale front hood, OEM",
+        "source": "parts4usa.com"
+      },
+      {
+        "low": 2988,
+        "url": "https://www.royalbodykits.com/products/novitec-front-bumper-center-part-ferrari-sf90-spider-stradale",
+        "high": 2988,
+        "item": "Novitec carbon fiber front bumper center part (aftermarket, not OEM)",
+        "kind": "part_new",
+        "line": "front.panels",
+        "note": "Novitec - Front Bumper Center Part Ferrari SF90 Spider/Stradale",
+        "source": "royalbodykits.com"
+      },
+      {
+        "low": 20800,
+        "url": "https://www.pistonheads.com/gassing/topic.asp?h=0&f=235&t=1973753",
+        "high": 20800,
+        "item": "SF90 high-voltage battery pack (HVB) replacement",
+        "kind": "part_new",
+        "line": "electrical.hv",
+        "note": "Hybrid Battery Prices - PistonHeads UK · Forum-cited figure of £16,000 for SF90 battery replacement, converted to USD at ~1.30 GBP/USD; LaFerrari comparison cited as £144,000 incl VAT in same thread",
+        "source": "pistonheads.com"
+      },
+      {
+        "low": 15000,
+        "url": "https://www.ferrarichat.com/forum/threads/laferrari-replacement-v12-no-hybrid-less-power-than-sf90stradale.614333/page-7",
+        "high": 15000,
+        "item": "LaFerrari small hybrid battery replacement (comparison data point, not SF90)",
+        "kind": "part_new",
+        "line": "electrical.hv",
+        "note": "FerrariChat - LaFerrari replacement thread · Different model (LaFerrari, not SF90); cited as 'under $15k' for the small battery",
+        "source": "ferrarichat.com"
+      },
+      {
+        "low": 7530,
+        "url": "https://www.wardsauto.com/vehicles/ferrari-s-hybrid-battery-replacement-plan-to-protect-performance-and-value",
+        "high": 7530,
+        "item": "Ferrari hybrid HV battery pack replacement (Warranty Extension Hybrid program annual cost, SF90/296 eligible)",
+        "kind": "job_quote",
+        "line": "electrical.hv",
+        "note": "Ferrari's Hybrid Battery Replacement Plan to Protect Performance and Value · This is the annual warranty-scheme premium (€7,000≈$7,530/yr) for guaranteed future HVB replacement, not a stand-alone repair invoice; 8-year total ≈$60,000 per autoevolution source",
+        "source": "wardsauto.com"
+      },
+      {
+        "low": 56000,
+        "url": "https://www.theautopian.com/ferrari-new-hybrid-battery-extended-warranty-doesnt-make-sense/",
+        "high": 60000,
+        "item": "8-year Ferrari hybrid powertrain extended warranty (incl. guaranteed HVB replacement at year 8)",
+        "kind": "job_quote",
+        "line": "electrical.hv",
+        "note": "The Autopian - Ferrari hybrid battery extended warranty · €56,000 total over 8 years per Automotive News (~$60,000 per autoevolution using $7,500/yr x 8); covers full powertrain warranty extension plus guaranteed HVB replacement, not an isolated part/labor repair charge",
+        "source": "theautopian.com"
+      },
+      {
+        "low": 4499,
+        "url": "https://parts4usa.com/products/ferrari-sf90-stradale-headlight-lh-oem-part-number-882837",
+        "high": 4499,
+        "item": "Headlamp assembly, LH, OEM Ferrari part number 882837",
+        "kind": "part_new",
+        "line": "front.lamps",
+        "note": "Ferrari SF90 Stradale Headlight LH, OEM, part number: 882837 · Single left-hand genuine OEM headlamp unit, price includes shipping; no separate RH dollar figure was found, but RH (882834/816044) is the mirror-image assembly for the same car.",
+        "source": "parts4usa.com"
+      }
+    ]
+  },
+  "expect": {
+    "verdict": "walk",
+    "wreckMin": 3,
+    "panelsMax": 60000
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "Count": 3,
+  "Message": "Results returned successfully",
+  "results": [
+    {
+      "NHTSACampaignNumber": "20V018000",
+      "Component": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+      "Summary": "BMW of North America, LLC (BMW) is recalling certain 2000-2005 323iT, 325iT, 325xiT, 320i, 323i, 325i, 325xi, 328i, 330i and 330xi and 2000-2006 323Ci, 325Ci, 328Ci, 330Ci, M3 Coupe, 323Cic, 325Cic, 330Cic, and M3 Convertible vehicles equipped with non-desiccated frontal Takata P",
+      "Remedy": "BMW will notify owners, and dealers will replace the passenger's front air bag, free of charge.  The recall began February 13, 2020.  Owners may contact BMW customer service at 1-800-525-7417.",
+      "ReportReceivedDate": "15/01/2020"
+    },
+    {
+      "NHTSACampaignNumber": "14V428000",
+      "Component": "AIR BAGS",
+      "Summary": "BMW of North America, LLC (BMW) is recalling certain model year 2000 323i sedans, coupes, convertibles, and Sports Wagons; 2000 328i sedans and coupes; 2001-2005 325i sedans, coupes, convertibles, and Sport Wagons; 2001-2005 325xi sedans and Sports Wagons; 2006 325i coupes and co",
+      "Remedy": "Owners are advised not to drive their vehicles until they have been repaired. BMW will notify owners, and dealers will replace the passenger side frontal air bag, free of charge.  An interim notice wa",
+      "ReportReceivedDate": "11/06/2018"
+    },
+    {
+      "NHTSACampaignNumber": "15V318000",
+      "Component": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+      "Summary": "BMW of North America, LLC (BMW) is recalling certain model year 2002-2005 325i, 325xi, 330i, and 330xi Sedans, and 325xi and 325i Sportswagons, 2002-2006 330Ci, 325Ci, and M3 Convertibles and 325i, 330i, and M3 Coupes, 2002-2003 M5, 540i, 525i Sedan, and 530i Sedans, and 540i and",
+      "Remedy": "Owners are advised not to drive their vehicles until the vehicle has been remedied.  BMW will notify owners, and dealers will replace the front driver air bag module, free of charge.  The recall began",
+      "ReportReceivedDate": "28/05/2015"
+    }
+  ]
+}

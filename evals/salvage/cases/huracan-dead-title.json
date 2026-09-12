@@ -1,0 +1,168 @@
+{
+  "name": "huracan-dead-title",
+  "note": "Non-repairable title with cited wreck prices and thin part-out citations. hand-converted 2026-08-17 from the recorded freeform findings into typed comps, each as its source stated it.",
+  "lotId": "huracan-front-mi",
+  "triage": {
+    "overall": "parts_car",
+    "areas": [
+      {
+        "area": "front clip / crash structure",
+        "kind": "structural",
+        "severity": "heavy",
+        "description": "Front bumper fascia destroyed, headlights smashed/displaced, hood buckled, and front crash-can/radiator support structure visibly crushed and pushed rearward on both the driver and passenger sides. This is a broad, full-width frontal hit, not a light cosmetic bumper tap - likely compromised front frame rails/crash structure requiring structural replacement.",
+        "photos": [0, 3, 4]
+      },
+      {
+        "area": "right front fender/door",
+        "kind": "cosmetic",
+        "severity": "moderate",
+        "description": "Right-side fender crumpled and folded back to the door line/wheel arch; wheel appears to sit at a slightly altered angle suggesting force transmitted rearward into the corner, worth inspecting the front suspension pickup points on that side.",
+        "photos": [2]
+      },
+      {
+        "area": "front suspension (right side)",
+        "kind": "mechanical",
+        "severity": "moderate",
+        "description": "Wheel alignment/camber in photo 2 looks slightly off compared to the clean geometry on the left side (photo 1), consistent with a hit hard enough to tweak a control arm, tie rod, or subframe mount on the right front corner. Cannot confirm bend without underside photos.",
+        "photos": [1, 2]
+      },
+      {
+        "area": "restraint system / interior",
+        "kind": "electrical",
+        "severity": "moderate",
+        "description": "Driver and passenger front airbags have deployed, with residual bag fabric hanging from the steering wheel and dash/A-pillar area; SRS module, wiring harness, and seatbelt pretensioners will all need replacement/reset for any future use.",
+        "photos": [6, 7, 9]
+      },
+      {
+        "area": "rear clip",
+        "kind": "cosmetic",
+        "severity": "light",
+        "description": "Rear bumper, diffuser, taillights and engine cover glass all appear factory-straight with no signs of impact, staining, or misalignment - damage is isolated to the front of the car.",
+        "photos": [5]
+      },
+      {
+        "area": "engine bay/drivetrain",
+        "kind": "mechanical",
+        "severity": "light",
+        "description": "V10 engine and visible ancillary components under the rear glass look undisturbed with no obvious fluid leaks, but since the engine sits well aft of the crush zone the mid-engine layout likely spared the drivetrain from direct impact.",
+        "photos": [10]
+      }
+    ],
+    "airbagsDeployed": "yes",
+    "floodEvidence": false,
+    "fireEvidence": false,
+    "drivetrainRisk": "The mid-engine V10 and transaxle sit well behind the crush zone and show no visible leaks or displacement in the engine-bay glass shot, so direct mechanical damage to the drivetrain itself is unlikely; the bigger risk is the front crash structure, cooling radiators, and front suspension/subframe mounts which took the brunt of the hit and will need thorough inspection.",
+    "observations": [
+      {
+        "photo": 0,
+        "note": "Right-front corner shows crumpled bumper/fender, headlight area pushed in; wheel/tire look intact and properly aligned."
+      },
+      {
+        "photo": 1,
+        "note": "Left side profile relatively clean - shows factory wheels, no obvious side intrusion, confirms damage is front-concentrated."
+      },
+      {
+        "photo": 2,
+        "note": "Rear-quarter view shows crumpled right front fender pushed rearward into door line and wheel arch, tire seems to be leaning inward - possible suspension geometry shift transmitted from front hit."
+      },
+      {
+        "photo": 3,
+        "note": "Front right view: bumper cover torn away exposing crash structure, headlight housing cracked/dislodged, radiator support/crash can visibly deformed and pushed back with wiring/hardware hanging loose."
+      },
+      {
+        "photo": 4,
+        "note": "Direct front view confirms both headlights/bumper fascia removed or destroyed, front clip structure crumpled, hood is buckled at leading edge, left corner also showing impact damage suggesting a broad frontal impact rather than a narrow offset hit."
+      },
+      {
+        "photo": 5,
+        "note": "Rear view is clean - taillights, diffuser, exhaust, engine cover glass all intact, no evidence of secondary rear impact."
+      },
+      {
+        "photo": 6,
+        "note": "Interior driver side shows deployed airbag (steering wheel bag fired, hanging fabric) and deployed knee/side airbag remnants visible near dash - confirms frontal impact severity was sufficient to trigger SRS."
+      },
+      {
+        "photo": 7,
+        "note": "Passenger side interior shows deployed airbag residue on dash/A-pillar area; seats and console otherwise appear undamaged cosmetically."
+      },
+      {
+        "photo": 8,
+        "note": "Dash cluster photo shows odometer reading ~7721 miles, low-mileage car, confirms Huracan EVO trim."
+      },
+      {
+        "photo": 9,
+        "note": "Wide interior shot reconfirms airbag deployment cloth hanging from steering wheel, no fire or water staining visible on carpets/seats."
+      },
+      {
+        "photo": 10,
+        "note": "Engine bay glass view from above shows V10 engine intact, no visible fluid leakage, coolant hoses and intake plumbing appear undisturbed - engine sits well aft of the crush zone."
+      },
+      {
+        "photo": 11,
+        "note": "VIN/certification tag photo, confirms Huracan EVO RWD build plate, no damage-relevant info beyond ID confirmation."
+      }
+    ],
+    "confidence": 0.55
+  },
+  "evidence": {
+    "comps": [
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 242000,
+        "year": 2021,
+        "title": "clean",
+        "url": "https://www.cars.com/shopping/lamborghini-huracan_evo-2021/",
+        "source": "cars.com",
+        "note": "nationwide low ask"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 296000,
+        "year": 2021,
+        "title": "clean",
+        "url": "https://www.kbb.com/lamborghini/huracan/2021/evo-coupe-2d/",
+        "source": "kbb.com",
+        "note": "KBB retail"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "bid_no_sale",
+        "price": 67500,
+        "year": 2021,
+        "title": "salvage",
+        "damage": "front end",
+        "url": "https://www.salvagereseller.com/cars-for-sale/title_type/salvage/make/Lamborghini?lang=en",
+        "source": "salvagereseller.com",
+        "note": "opening bid vs $295,256 stated ACV"
+      },
+      {
+        "lane": "wreck",
+        "outcome": "bid_no_sale",
+        "price": 33250,
+        "year": 2021,
+        "title": "salvage",
+        "damage": "rear end",
+        "url": "https://www.salvageautosauction.com/models/group/Salvage-Lamborghini-HURACAN-for-Sale",
+        "source": "salvageautosauction.com"
+      }
+    ],
+    "prices": [
+      {
+        "line": "front.structure",
+        "item": "front bumper cover / spoiler assembly, genuine",
+        "kind": "part_new",
+        "low": 5999,
+        "high": 11999,
+        "url": "https://parts4usa.com/collections/lamborghini",
+        "source": "parts4usa.com",
+        "note": "recorded under the parts topic; the only front-end part priced"
+      }
+    ]
+  },
+  "expect": {
+    "verdict": "walk",
+    "dealbreaker": true
+  }
+}

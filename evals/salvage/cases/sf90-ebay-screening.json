@@ -1,0 +1,232 @@
+{
+  "name": "sf90-ebay-screening",
+  "note": "The same clean anchor with recorded eBay Browse item summaries beside it: the suite runs the live comps fetcher over them, so the fixed-price rule and the exotic whole-vehicle floor are graded on the evidence the assessor would use. Item summaries recorded 2026-08-17 from Browse Cars & Trucks; the auction, the parts-priced spoiler and the listing that declares no buying option are the screening cases.",
+  "lotId": "sf90-front-il",
+  "triage": {
+    "areas": [
+      {
+        "area": "front clip",
+        "kind": "cosmetic",
+        "photos": [0, 3, 4, 10],
+        "severity": "heavy",
+        "description": "Front bumper cover, splitter, and headlight assemblies torn off/missing on both corners; underlying crash can and radiator support visible but no visible bending of aluminum rails."
+      },
+      {
+        "area": "right front corner",
+        "kind": "mechanical",
+        "photos": [0, 3],
+        "severity": "heavy",
+        "description": "Right front wheel well torn open, brake caliper and control arms exposed; wheel sits at a slightly odd angle suggesting possible suspension displacement, but tire/wheel itself not visibly bent."
+      },
+      {
+        "area": "left front corner",
+        "kind": "mechanical",
+        "photos": [1],
+        "severity": "moderate",
+        "description": "Left front fender/bumper area torn away exposing suspension and brake components; no obvious bent control arms visible in photo."
+      },
+      {
+        "area": "rear clip",
+        "kind": "cosmetic",
+        "photos": [2, 5, 9],
+        "severity": "moderate",
+        "description": "Rear bumper fascia and diffuser cover removed, exposing exhaust, hybrid inverter, and wiring harness; bumper beam and structure behind look straight and undamaged."
+      },
+      {
+        "area": "underbody",
+        "kind": "electrical",
+        "photos": [1, 2, 5],
+        "severity": "moderate",
+        "description": "Hybrid high-voltage components (orange cabling, inverter box) exposed at both front and rear due to missing fascias; isolation/HV integrity unverified from photos."
+      },
+      {
+        "area": "interior",
+        "kind": "cosmetic",
+        "photos": [6, 7, 8],
+        "severity": "light",
+        "description": "Cabin appears clean and undamaged, seats and dash intact, no airbag deployment evident."
+      },
+      {
+        "area": "wheels/suspension",
+        "kind": "mechanical",
+        "photos": [0, 1, 3],
+        "severity": "moderate",
+        "description": "Front wheels/suspension exposed due to missing bumpers; no confirmed bent components but front impact likely stressed lower control arms and steering rack given extent of fascia loss."
+      }
+    ],
+    "overall": "borderline",
+    "confidence": 0.55,
+    "fireEvidence": false,
+    "observations": [
+      {
+        "note": "Front clip completely torn off exposing front suspension, brake calipers, and crash structure; heavy impact damage to right front corner.",
+        "photo": 0
+      },
+      {
+        "note": "Left side view shows front bumper/fender torn away, left front wheel/suspension exposed; rear bumper cover also missing exposing hybrid components and exhaust.",
+        "photo": 1
+      },
+      {
+        "note": "Rear quarter view shows rear bumper fascia removed exposing hybrid electrical harness, exhaust tips, and diffuser structure; no visible structural rail deformation.",
+        "photo": 2
+      },
+      {
+        "note": "Front right corner missing bumper and headlight area, front crash can/hybrid inverter box exposed; wheel appears upright, no obvious camber change visible here.",
+        "photo": 3
+      },
+      {
+        "note": "Overhead front view confirms bumper cover and front fascia torn off both corners, headlights displaced, but hood and front frame rails appear straight.",
+        "photo": 4
+      },
+      {
+        "note": "Rear straight-on view shows bumper cover removed exposing exhaust, hybrid motor/inverter unit, and wiring; rear crash structure and bumper beam visible but not visibly bent.",
+        "photo": 5
+      },
+      {
+        "note": "Interior driver seat area intact, no airbag deployment visible, no fire/flood staining.",
+        "photo": 6
+      },
+      {
+        "note": "Interior passenger/dash view intact, steering wheel airbag cover appears intact/unfired.",
+        "photo": 7
+      },
+      {
+        "note": "Instrument cluster shows only 3,004 miles, multiple warning lights (battery, system not programmed) consistent with disconnected 12V/HV systems for storage, not necessarily damage indicator.",
+        "photo": 8
+      },
+      {
+        "note": "Rear engine cover/glass area shown; some minor surface scuffing near louvers but panel intact, no crush.",
+        "photo": 9
+      },
+      {
+        "note": "Hood/front fascia area shows panel gaps but hood itself unbent, minor gap misalignment from missing bumper.",
+        "photo": 10
+      },
+      {
+        "note": "VIN and Ferrari data plate tag, confirms SF90 Stradale identity, no damage info.",
+        "photo": 11
+      }
+    ],
+    "floodEvidence": false,
+    "drivetrainRisk": "Front and rear fascias are torn off exposing hybrid inverter, wiring, and exhaust, but the mid-engine V8/hybrid powertrain itself isn't visible in these shots; low mileage (3,004 mi) is a plus, though HV isolation must be verified before any bench work given exposed orange cabling front and rear.",
+    "airbagsDeployed": "no"
+  },
+  "evidence": {
+    "comps": [
+      {
+        "lane": "clean",
+        "outcome": "sold",
+        "price": 506000,
+        "year": 2021,
+        "date": "2025-05",
+        "title": "clean",
+        "url": "https://cars.bonhams.com/auction/28793/lot/11/2021-ferrari-sf90-stradale-chassis-no-zff95nmb000272926/",
+        "source": "cars.bonhams.com",
+        "note": "base spec, delivered new to Germany, incl. premium"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 389995,
+        "year": 2021,
+        "title": "clean",
+        "url": "https://www.cars.com/shopping/ferrari-sf90_stradale-2021/",
+        "source": "cars.com",
+        "note": "nationwide low ask"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 439506,
+        "year": 2021,
+        "title": "clean",
+        "url": "https://www.cars.com/shopping/ferrari-sf90_stradale-2021/",
+        "source": "cars.com",
+        "note": "nationwide average ask"
+      },
+      {
+        "lane": "clean",
+        "outcome": "ask",
+        "price": 650000,
+        "year": 2021,
+        "mileage": 3914,
+        "title": "clean",
+        "variant": "Assetto Fiorano, $193,769 options",
+        "url": "https://sothebysmotorsport.com/auction/2021-ferrari-sf90stradaleassettofiorano-449",
+        "source": "sothebysmotorsport.com"
+      }
+    ],
+    "prices": [],
+    "ebayRaw": [
+      {
+        "itemId": "296104815501",
+        "title": "2021 Ferrari SF90 Stradale Coupe clean title 3,100 miles",
+        "price": {
+          "value": "479900",
+          "currency": "USD"
+        },
+        "itemWebUrl": "https://www.ebay.com/itm/296104815501",
+        "buyingOptions": ["FIXED_PRICE", "BEST_OFFER"]
+      },
+      {
+        "itemId": "296104815502",
+        "title": "2022 Ferrari SF90 Stradale clean title 1,900 miles",
+        "price": {
+          "value": "524995",
+          "currency": "USD"
+        },
+        "itemWebUrl": "https://www.ebay.com/itm/296104815502",
+        "buyingOptions": ["FIXED_PRICE"]
+      },
+      {
+        "itemId": "296104815503",
+        "title": "2020 Ferrari SF90 Stradale clean title",
+        "price": {
+          "value": "449000",
+          "currency": "USD"
+        },
+        "itemWebUrl": "https://www.ebay.com/itm/296104815503",
+        "buyingOptions": ["FIXED_PRICE"]
+      },
+      {
+        "itemId": "296104815504",
+        "title": "2021 Ferrari SF90 Stradale no reserve",
+        "price": {
+          "value": "255000",
+          "currency": "USD"
+        },
+        "itemWebUrl": "https://www.ebay.com/itm/296104815504",
+        "buyingOptions": ["AUCTION"],
+        "currentBidPrice": {
+          "value": "255000",
+          "currency": "USD"
+        }
+      },
+      {
+        "itemId": "296104815505",
+        "title": "2021 Ferrari SF90 Stradale carbon fiber rear spoiler",
+        "price": {
+          "value": "6500",
+          "currency": "USD"
+        },
+        "itemWebUrl": "https://www.ebay.com/itm/296104815505",
+        "buyingOptions": ["FIXED_PRICE"]
+      },
+      {
+        "itemId": "296104815506",
+        "title": "2021 Ferrari SF90 Stradale rebuilt title",
+        "price": {
+          "value": "310000",
+          "currency": "USD"
+        },
+        "itemWebUrl": "https://www.ebay.com/itm/296104815506"
+      }
+    ]
+  },
+  "expect": {
+    "exitLane": "clean_sold_derived",
+    "progressIncludes": [
+      "3 dropped: 2 no fixed price, 1 under the whole-vehicle floor, 0 outside this lot's market"
+    ]
+  }
+}
